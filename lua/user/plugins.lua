@@ -49,6 +49,13 @@ return packer.startup(function(use)
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'liuchengxu/vim-which-key'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
