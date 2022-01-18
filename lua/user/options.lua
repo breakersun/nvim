@@ -32,10 +32,12 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  wildmenu = true,                     -- Display all matching files when we tab complete
 }
 
 vim.opt.shortmess:append "c"
+vim.opt.path:append "**"                   -- Provides tab-completion for all file-related tasks
+
 
 for k, v in pairs(options) do
   vim.opt[k] = v
