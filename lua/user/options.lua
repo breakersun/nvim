@@ -33,6 +33,7 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   wildmenu = true,                     -- Display all matching files when we tab complete
+  inccommand = "split",                      -- display effects while substitute
 }
 
 vim.opt.shortmess:append "c"
