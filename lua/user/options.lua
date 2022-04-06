@@ -34,6 +34,7 @@ local options = {
   sidescrolloff = 8,
   wildmenu = true,                     -- Display all matching files when we tab complete
   inccommand = "split",                      -- display effects while substitute
+  listchars = "tab:▸\\,eol:¬,trail:·"
 }
 
 vim.opt.shortmess:append "c"
