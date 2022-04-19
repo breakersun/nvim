@@ -1,6 +1,6 @@
 
 set nobackup
-set clipboard="unnamedplus"
+set clipboard=unnamedplus
 set cmdheight=2
 set fileencoding="utf-8"
 set number
@@ -31,3 +31,8 @@ set nowrap
 set wildmenu
 set shortmess+=c
 
+colorscheme tokyonight
+
+call plug#begin()
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+call plug#end()
