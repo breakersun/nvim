@@ -1,5 +1,6 @@
 
 set nobackup
+set nowritebackup
 set clipboard=unnamedplus
 set cmdheight=2
 set fileencoding="utf-8"
@@ -20,7 +21,6 @@ set termguicolors
 set timeoutlen=1000
 set updatetime=300
 set undofile
-set nowritebackup
 set expandtab
 set shiftwidth=2
 set tabstop=2
@@ -35,4 +35,5 @@ colorscheme tokyonight
 
 call plug#begin()
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
