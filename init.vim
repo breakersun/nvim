@@ -31,7 +31,6 @@ set nowrap
 set wildmenu
 set shortmess+=c
 
-colorscheme tokyonight
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -162,6 +161,8 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
+
+colorscheme tokyonight
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
