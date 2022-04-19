@@ -32,6 +32,10 @@ set wildmenu
 set shortmess+=c
 
 colorscheme tokyonight
+
+autocmd BufWinLeave *.* mkview 
+autocmd BufWinEnter *.* silent loadview
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
