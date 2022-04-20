@@ -31,6 +31,8 @@ set nowrap
 set wildmenu
 set shortmess+=c
 
+let mapleader=" "
+
 autocmd BufWinLeave *.* mkview 
 autocmd BufWinEnter *.* silent loadview
 
@@ -165,9 +167,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 call plug#end()
 
+" for folke/tokyonight
 colorscheme tokyonight
+" for vim-which-key
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
