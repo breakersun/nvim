@@ -165,6 +165,8 @@ call plug#begin()
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 lua << EOF
