@@ -172,6 +172,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 " for folke/tokyonight
@@ -181,6 +182,7 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
 
 lua << EOF
+require('gitsigns').setup()
 require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
