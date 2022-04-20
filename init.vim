@@ -31,8 +31,6 @@ set nowrap
 set wildmenu
 set shortmess+=c
 
-colorscheme tokyonight
-
 autocmd BufWinLeave *.* mkview 
 autocmd BufWinEnter *.* silent loadview
 
@@ -168,6 +166,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+colorscheme tokyonight
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
