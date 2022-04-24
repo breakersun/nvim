@@ -174,6 +174,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'unblevable/quick-scope'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " for folke/tokyonight
