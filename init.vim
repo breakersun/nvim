@@ -30,7 +30,7 @@ set cursorline
 set nowrap
 set wildmenu
 set shortmess+=c
-
+set scrolloff=2
 let mapleader=" "
 
 autocmd BufWinLeave *.* mkview 
