@@ -173,6 +173,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'unblevable/quick-scope'
 call plug#end()
 
 " for folke/tokyonight
@@ -180,6 +181,7 @@ colorscheme tokyonight
 " for vim-which-key
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 lua << EOF
 require('gitsigns').setup()
