@@ -36,6 +36,24 @@ let mapleader=" "
 autocmd BufWinLeave *.* mkview 
 autocmd BufWinEnter *.* silent loadview
 
+call plug#begin()
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'machakann/vim-highlightedyank'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'unblevable/quick-scope'
+Plug 'tpope/vim-commentary'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+call plug#end()
+
+" put coc related settings after plug manager
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -160,23 +178,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-call plug#begin()
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'machakann/vim-highlightedyank'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'unblevable/quick-scope'
-Plug 'tpope/vim-commentary'
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-call plug#end()
 
 " for folke/tokyonight
 colorscheme tokyonight
