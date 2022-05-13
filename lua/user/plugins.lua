@@ -33,6 +33,8 @@ return packer.startup({function(use)
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'liuchengxu/vim-which-key'
+  use 'machakann/vim-highlightedyank'
+  -- cmp
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
@@ -42,7 +44,6 @@ return packer.startup({function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
-  use 'machakann/vim-highlightedyank'
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
