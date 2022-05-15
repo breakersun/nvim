@@ -48,6 +48,8 @@ return packer.startup({function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json format
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
