@@ -48,7 +48,8 @@ return packer.startup({function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json format
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-
+  use "p00f/nvim-ts-rainbow"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate",}
   -- Automatically set up your configuration after cloning packer.nvim
