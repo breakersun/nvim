@@ -30,8 +30,6 @@ return packer.startup({function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use 'vim-airline/vim-airline'
   use 'folke/tokyonight.nvim'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use 'liuchengxu/vim-which-key'
   use 'machakann/vim-highlightedyank'
   -- cmp
