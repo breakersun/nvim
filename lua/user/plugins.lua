@@ -54,6 +54,8 @@ return packer.startup({function(use)
   use "p00f/nvim-ts-rainbow"
   -- autopairs
   use "windwp/nvim-autopairs"
+  -- comment
+  use "numToStr/Comment.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
