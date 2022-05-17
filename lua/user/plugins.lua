@@ -34,6 +34,7 @@ return packer.startup({function(use)
   use 'folke/tokyonight.nvim'
   use 'liuchengxu/vim-which-key'
   use 'machakann/vim-highlightedyank'
+  use 'goolord/alpha-nvim'
   -- cmp
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
