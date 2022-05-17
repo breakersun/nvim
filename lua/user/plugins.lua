@@ -69,6 +69,8 @@ return packer.startup({function(use)
   -- lua-line
   use 'nvim-lualine/lualine.nvim'
   use 'SmiteshP/nvim-gps'
+  -- whichkey
+  use "folke/which-key.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
