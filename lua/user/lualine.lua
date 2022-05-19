@@ -79,7 +79,7 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
+		lualine_b = {},
 		lualine_c = {{ gps.get_location, cond = gps.is_available },},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
