@@ -30,8 +30,10 @@ return packer.startup({function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use 'lewis6991/impatient.nvim'
   use "lukas-reineke/indent-blankline.nvim"
+  use 'gelguy/wilder.nvim'
   -- use 'vim-airline/vim-airline'
   use 'folke/tokyonight.nvim'
+  use "EdenEast/nightfox.nvim"
   use 'liuchengxu/vim-which-key'
   use 'machakann/vim-highlightedyank'
   use 'goolord/alpha-nvim'

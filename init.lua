@@ -19,3 +19,4 @@ require "user.whichkey"
 require 'user.indentline'
 require 'user.autocommands'
 require 'user.alpha'
+require 'user.wilder'
