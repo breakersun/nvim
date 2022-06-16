@@ -77,6 +77,8 @@ return packer.startup({function(use)
   use 'SmiteshP/nvim-gps'
   -- whichkey
   use "folke/which-key.nvim"
+  use 'machakann/vim-sandwich' 
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
