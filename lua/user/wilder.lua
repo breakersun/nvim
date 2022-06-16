@@ -1,6 +1,11 @@
-local status, wilder = pcall(require, 'wilder')
-if not status then
-  return
+local status, wilder
+if not vim.g.vscode then
+  status, wilder = pcall(require, 'wilder')
+  if not status then
+    return
+  end
+else
+    return
 end
 
 
