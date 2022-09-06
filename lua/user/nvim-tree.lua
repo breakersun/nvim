@@ -21,9 +21,14 @@ vim.g.nvim_tree_icons = {
   },
 }
 
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
+local status_ok, nvim_tree
+if not vim.g.vscode then
+  status_ok, nvim_tree = pcall(require, "nvim-tree")
+  if not status_ok then
+    return
+  end
+else
+    return
 end
 
 local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
