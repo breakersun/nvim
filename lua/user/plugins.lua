@@ -66,19 +66,19 @@ return packer.startup({function(use)
   -- git
   use "lewis6991/gitsigns.nvim"
   -- bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  --[[ use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} ]]
   use "moll/vim-bbye" -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   use "akinsho/toggleterm.nvim"
   -- nvim-tree
-  use 'kyazdani42/nvim-tree.lua'
+  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
   -- lua-line
   use 'nvim-lualine/lualine.nvim'
   use 'SmiteshP/nvim-gps'
   -- whichkey
   use "folke/which-key.nvim"
-  use 'machakann/vim-sandwich' 
-  
+  use 'machakann/vim-sandwich'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
