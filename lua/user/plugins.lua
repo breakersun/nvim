@@ -66,7 +66,7 @@ return packer.startup({function(use)
   -- git
   use "lewis6991/gitsigns.nvim"
   -- bufferline
-  --[[ use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} ]]
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   use "moll/vim-bbye" -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   use "akinsho/toggleterm.nvim"
