@@ -79,6 +79,7 @@ return packer.startup({function(use)
   use "folke/which-key.nvim"
   use 'machakann/vim-sandwich'
   use 'tpope/vim-sleuth'
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
