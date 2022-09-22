@@ -80,19 +80,8 @@ return packer.startup({ function(use)
     use 'machakann/vim-sandwich'
     use 'tpope/vim-sleuth'
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-    use {
-        'danymat/neogen',
-        config = function()
-            require('neogen').setup {}
-        end,
-        requires = "nvim-treesitter/nvim-treesitter",
-        -- Uncomment next line if you want to follow only stable versions
-        -- tag = "*"
-    }
-    use {
-        'phaazon/hop.nvim',
-        branch = 'v2', -- optional but strongly recommended
-    }
+    use { 'danymat/neogen', requires = "nvim-treesitter/nvim-treesitter", }
+    use { 'phaazon/hop.nvim', branch = 'v2', }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
