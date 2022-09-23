@@ -83,6 +83,7 @@ return packer.startup({ function(use)
     use { 'danymat/neogen', requires = "nvim-treesitter/nvim-treesitter", }
     use { 'phaazon/hop.nvim', branch = 'v2', }
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use 'ferrine/md-img-paste.vim'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
