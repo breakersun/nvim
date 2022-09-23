@@ -84,6 +84,8 @@ return packer.startup({ function(use)
     use { 'phaazon/hop.nvim', branch = 'v2', }
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     use 'ferrine/md-img-paste.vim'
+    use 'sotte/presenting.vim'
+use 'tpope/vim-dispatch'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
