@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-    ["/"] = { "<cmd>lua require(\"Comment.api\").toggle.linewise()<CR>", "Comment" },
+    ["/"] = { function() require('Comment.api').toggle.linewise() end, "Comment" },
     ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
     ["b"] = {
         function()
@@ -93,7 +93,7 @@ local mappings = {
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["f"] = {
-        "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+        function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})end,
         "Find files",
     },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -136,20 +136,14 @@ local mappings = {
             "<cmd>Telescope lsp_workspace_diagnostics<cr>",
             "Workspace Diagnostics",
         },
-        f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+        f = { vim.lsp.buf.formatting, "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-        j = {
-            "<cmd>lua vim.diagnostic.goto_next()<CR>",
-            "Next Diagnostic",
-        },
-        k = {
-            "<cmd>lua vim.diagnostic.goto_prev()<cr>",
-            "Prev Diagnostic",
-        },
-        l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+        j = { vim.diagnostic.goto_next, "Next Diagnostic", },
+        k = { vim.diagnostic.goto_prev, "Prev Diagnostic", },
+        l = { vim.lsp.codelens.run, "CodeLens Action" },
         q = { vim.lsp.diagnostic.set_loclist, "Quickfix" },
-        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+        r = { vim.lsp.buf.rename, "Rename" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
         S = {
             "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
@@ -170,10 +164,10 @@ local mappings = {
 
     t = {
         name = "Terminal",
-        n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-        u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-        t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-        p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+        n = { _NODE_TOGGLE, "Node" },
+        u = { _NCDU_TOGGLE, "NCDU" },
+        t = { _HTOP_TOGGLE, "Htop" },
+        p = { _PYTHON_TOGGLE, "Python" },
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
