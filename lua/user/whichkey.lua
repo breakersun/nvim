@@ -3,6 +3,9 @@ if not status_ok then
     return
 end
 
+local _, gitsigns = pcall(require, 'gitsigns')
+if not _ then print('gitsigns is not installed') end
+
 local setup = {
     plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -93,7 +96,7 @@ local mappings = {
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["f"] = {
-        function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})end,
+        function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false }) end,
         "Find files",
     },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -111,14 +114,14 @@ local mappings = {
     g = {
         name = "Git",
         g = { _LAZYGIT_TOGGLE, "Lazygit" },
-        j = { require 'gitsigns'.next_hunk, "Next Hunk" },
-        k = { require 'gitsigns'.prev_hunk, "Prev Hunk" },
-        l = { require 'gitsigns'.blame_line, "Blame" },
-        p = { require 'gitsigns'.preview_hunk, "Preview Hunk" },
-        r = { require 'gitsigns'.reset_hunk, "Reset Hunk" },
-        R = { require 'gitsigns'.reset_buffer, "Reset Buffer" },
-        s = { require 'gitsigns'.stage_hunk, "Stage Hunk" },
-        u = { require 'gitsigns'.undo_stage_hunk, "Undo Stage Hunk", },
+        j = { gitsigns.next_hunk, "Next Hunk" },
+        k = { gitsigns.prev_hunk, "Prev Hunk" },
+        l = { gitsigns.blame_line, "Blame" },
+        p = { gitsigns.preview_hunk, "Preview Hunk" },
+        r = { gitsigns.reset_hunk, "Reset Hunk" },
+        R = { gitsigns.reset_buffer, "Reset Buffer" },
+        s = { gitsigns.stage_hunk, "Stage Hunk" },
+        u = { gitsigns.undo_stage_hunk, "Undo Stage Hunk", },
         o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
