@@ -132,11 +132,11 @@ local mappings = {
         name = "LSP",
         a = { vim.lsp.buf.code_action, "Code Action" },
         d = {
-            "<cmd>Telescope lsp_document_diagnostics<cr>",
+            "<cmd>Telescope diagnostics bufnr=0<cr>",
             "Document Diagnostics",
         },
         w = {
-            "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+            "<cmd>Telescope diagnostics<cr>",
             "Workspace Diagnostics",
         },
         f = { vim.lsp.buf.formatting, "Format" },
