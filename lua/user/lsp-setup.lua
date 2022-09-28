@@ -1,6 +1,9 @@
 local _, setuptool = pcall(require, 'lsp-setup')
 if not _ then return end
 
+-- UI settings for lsp
+require('user.lsp-ui').setup()
+
 setuptool.setup({
     default_mappings = false,
     mappings = {
