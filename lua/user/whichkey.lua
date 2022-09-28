@@ -141,7 +141,7 @@ local mappings = {
         },
         f = { vim.lsp.buf.formatting, "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
-        I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+        m = { "<cmd>Mason<cr>", "Mason" },
         j = { vim.diagnostic.goto_next, "Next Diagnostic", },
         k = { vim.diagnostic.goto_prev, "Prev Diagnostic", },
         l = { vim.lsp.codelens.run, "CodeLens Action" },
