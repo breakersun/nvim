@@ -52,7 +52,7 @@ return packer.startup({ function(use)
     use 'neovim/nvim-lspconfig'
     use "tamago324/nlsp-settings.nvim" -- language server settings defined in json format
     use {
-        'junnplus/lsp-setup.nvim',
+        'breakersun/lsp-setup.nvim',
         requires = {
             'neovim/nvim-lspconfig',
             'williamboman/mason.nvim',
