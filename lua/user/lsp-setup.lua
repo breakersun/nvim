@@ -14,5 +14,6 @@ setuptool.setup({
                 },
             },
         },
+        clangd = { },
     }
 })
