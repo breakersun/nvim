@@ -95,7 +95,7 @@ local mappings = {
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["Q"] = { "<cmd>qall<CR>", "Quit All" },
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    --[[ ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" }, ]]
     ["f"] = {
         function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false }) end,
         "Find files",
