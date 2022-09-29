@@ -36,7 +36,7 @@ setuptool.setup({
         ['gl'] = 'lua vim.diagnostic.open_float()',
         ['[d'] = 'lua vim.diagnostic.goto_prev()',
         [']d'] = 'lua vim.diagnostic.goto_next()',
-        ['<leader>q'] = 'lua vim.diagnostic.setloclist()'
+        --[[ ['<leader>q'] = 'lua vim.diagnostic.setloclist()' ]]
     },
     on_attach = lsp_highlight_document;
     servers = {
