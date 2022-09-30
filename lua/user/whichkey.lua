@@ -100,7 +100,7 @@ local mappings = {
         function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false }) end,
         "Find files",
     },
-    ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    ["F"] = { "<cmd>Telescope grep_string theme=ivy<cr>", "Find Text" },
     ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
 
     p = {
