@@ -6,7 +6,7 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+--[[ keymap("", "<Space>", "<Nop>", opts) ]]
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -19,9 +19,6 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
--- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
