@@ -93,6 +93,7 @@ return packer.startup({ function(use)
     use 'sotte/presenting.vim'
     use 'tpope/vim-dispatch'
     use {'nvim-telescope/telescope-ui-select.nvim' }
+    use {'nvim-telescope/telescope-project.nvim' }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
