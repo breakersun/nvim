@@ -81,7 +81,7 @@ lualine.setup({
         lualine_a = { branch, diagnostics },
         lualine_b = {},
         --[[ lualine_c = { { gps.get_location, cond = gps.is_available }, }, ]]
-        --[[ lualine_c = { {'filename', path = 1, shorting_target = 40}, }, ]]
+        lualine_c = { {'filename', path = 1, shorting_target = 40}, },
         -- lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_x = { diff, spaces, "encoding", filetype },
         lualine_y = { location },
