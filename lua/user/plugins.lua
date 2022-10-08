@@ -77,7 +77,7 @@ return packer.startup({ function(use)
     -- toggleterm
     use "akinsho/toggleterm.nvim"
     -- nvim-tree
-    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', tag = 'nightly' }
     -- lua-line
     use 'nvim-lualine/lualine.nvim'
     use 'SmiteshP/nvim-gps'
