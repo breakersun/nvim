@@ -4,7 +4,7 @@ if not _ then return end
 -- UI settings for lsp
 require('user.lsp-ui').setup()
 
-local function lsp_highlight_document(client)
+local function lsp_highlight_document(client, bufnr)
     -- Set autocommands conditional on server_capabilities
     if client.server_capabilities.document_highlight then
         vim.api.nvim_exec(
@@ -38,7 +38,12 @@ setuptool.setup({
         [']d'] = 'lua vim.diagnostic.goto_next()',
         --[[ ['<leader>q'] = 'lua vim.diagnostic.setloclist()' ]]
     },
-    on_attach = lsp_highlight_document;
+    on_attach = function(client, bufnr)
+        local navic = require('nvim-navic')
+        if client.server_capabilities.documentSymbolProvider then
+            navic.attach(client, bufnr)
+        end
+    end,
     servers = {
         sumneko_lua = {
             settings = {
