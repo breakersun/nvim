@@ -95,6 +95,7 @@ return packer.startup({ function(use)
     use {'nvim-telescope/telescope-ui-select.nvim' }
     use {'nvim-telescope/telescope-project.nvim' }
     use { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" }
+    use {'RRethy/vim-illuminate'}
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
