@@ -63,7 +63,7 @@ function M.get_winbar()
       .. ""
       .. "%*"
   else
-    return "%#WinBarSeparator#" .. "%=" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%*"
+    return "%#WinBarSeparator#" .. "" .. "%*" .. get_modified() .. "%#WinBarSeparator#" .. "" .. "%*"
   end
 end
 
