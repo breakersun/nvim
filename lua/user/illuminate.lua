@@ -7,5 +7,6 @@ illuminate.configure({
         'fugitive',
         'NvimTree',
         'alpha',
+        'help',
     },
 })
