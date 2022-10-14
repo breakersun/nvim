@@ -5,6 +5,7 @@ illuminate.configure({
     filetypes_denylist = {
         'dirvish',
         'fugitive',
-        'NvimTree'
+        'NvimTree',
+        'alpha',
     },
 })
