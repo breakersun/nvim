@@ -37,7 +37,8 @@ local options = {
     listchars = "tab:▸\\ ,eol:¬,trail:·",
     showmatch = true,
     showcmd = true,
-    winbar = "%{%v:lua.require'user.winbar'.get_winbar()%}"
+    winbar = "%{%v:lua.require'user.winbar'.get_winbar()%}",
+    modeline = false,
 }
 
 vim.opt.shortmess:append "c"
