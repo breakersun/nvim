@@ -108,6 +108,7 @@ return packer.startup({ function(use)
         require("barbecue").setup()
       end,
     }
+    use 'junegunn/vim-easy-align'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
