@@ -109,6 +109,7 @@ return packer.startup({ function(use)
       end,
     }
     use 'junegunn/vim-easy-align'
+    use 'tpope/vim-unimpaired'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
