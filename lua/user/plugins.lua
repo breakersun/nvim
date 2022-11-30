@@ -99,6 +99,7 @@ return packer.startup({ function(use)
     use 'dhananjaylatkar/cscope_maps.nvim'
     use {
       "utilyre/barbecue.nvim",
+        branch = 'dev',
       requires = {
         "neovim/nvim-lspconfig",
         "smiteshp/nvim-navic",
