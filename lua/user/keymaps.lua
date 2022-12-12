@@ -29,8 +29,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- I want move line up/down consinusly, not moving & inserting
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
--- disable search highlights
-keymap("n", "<Esc><Esc>", "<Esc>:noh<CR>", opts)
 
 -- Insert --
 
