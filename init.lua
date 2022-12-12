@@ -26,5 +26,5 @@ require 'user.neogen'
 require 'user.markdown-preview'
 require 'user.lsp-setup'
 require 'user.illuminate'
-require 'user.cscope'
+--[[ require 'user.cscope' ]]
 require 'user.iswap'
