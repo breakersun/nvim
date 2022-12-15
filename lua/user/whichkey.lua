@@ -95,6 +95,7 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["Q"] = { "<cmd>qall<CR>", "Quit All" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["C"] = { "<cmd>cclose<cr>", "Close Quickfix" },
   --[[ ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" }, ]]
   ["f"] = {
     function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false }) end,
@@ -127,6 +128,12 @@ local mappings = {
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
+  },
+
+  G = {
+    name = 'GTags',
+    d = {'<cmd>GtagsCursor<cr>', 'Jump Between Def/Ref'},
+    l = {'<cmd>Gtags -f %<cr>', 'List Current Objects'},
   },
 
   l = {
