@@ -57,3 +57,7 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("t", "<Esc>", "<C-\\><C-N>", term_opts)
 keymap("t", "<A-[>", "<Esc>", term_opts)
+
+-- for vim-easy-align
+keymap('x', 'ga', '<Plug>(EasyAlign)', opts)
+keymap('n', 'ga', '<Plug>(EasyAlign)', opts)
