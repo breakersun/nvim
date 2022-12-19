@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 --Remap space as leader key
 --[[ keymap("", "<Space>", "<Nop>", opts) ]]
@@ -61,3 +61,5 @@ keymap("t", "<A-[>", "<Esc>", term_opts)
 -- for vim-easy-align
 keymap('x', 'ga', '<Plug>(EasyAlign)', opts)
 keymap('n', 'ga', '<Plug>(EasyAlign)', opts)
+
+vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
