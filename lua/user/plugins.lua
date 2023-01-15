@@ -99,7 +99,7 @@ return packer.startup({ function(use)
     use 'ivechan/gtags.vim'
     use {
       "utilyre/barbecue.nvim",
-        branch = 'dev',
+        --[[ branch = 'dev', ]]
       requires = {
         "neovim/nvim-lspconfig",
         "smiteshp/nvim-navic",
