@@ -130,7 +130,7 @@ local mappings = {
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
   },
 
-  G = {
+  j = {
     name = 'GTags',
     d = {'<cmd>GtagsCursor<cr>', 'Jump Between Def/Ref'},
     l = {'<cmd>Gtags -f %<cr>', 'List Current Objects'},
