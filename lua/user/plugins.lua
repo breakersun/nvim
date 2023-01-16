@@ -33,11 +33,8 @@ return packer.startup({ function(use)
     use { 'gelguy/wilder.nvim', run = ':UpdateRemotePlugins' }
     -- use 'vim-airline/vim-airline'
     use 'folke/tokyonight.nvim'
-    use "EdenEast/nightfox.nvim"
-    use 'liuchengxu/vim-which-key'
     use 'machakann/vim-highlightedyank'
     use 'goolord/alpha-nvim'
-    use 'simrat39/symbols-outline.nvim'
     -- cmp
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
