@@ -104,6 +104,20 @@ local mappings = {
   ["F"] = { "<cmd>Telescope grep_string theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
 
+  d = {
+    name = 'Debugger',
+    b = { require('dap').toggle_breakpoint, 'Toggle Breakpoint' },
+    B = { function()
+            require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
+          end,
+          'Conditional Breakpoint' },
+    p = { function()
+            require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
+          end,
+          'Print Point'
+    },
+    r = { require('dap').repl.open, 'Open Repl'},
+  },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
