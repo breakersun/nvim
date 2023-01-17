@@ -1,4 +1,11 @@
-require('dap-python').setup('python.exe')
+
+local _status_ok, dap_python = pcall(require, 'dap-python')
+if not _status_ok then
+  return
+end
+
+dap_python.setup('python')
+
 --[[ table.insert(require('dap').configurations.python, { ]]
 --[[   type = 'python', ]]
 --[[   request = 'launch', ]]
