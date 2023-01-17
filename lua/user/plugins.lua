@@ -48,7 +48,6 @@ return packer.startup({ function(use)
   use 'rafamadriz/friendly-snippets'
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json format
   use {
     'breakersun/lsp-setup.nvim',
     requires = {
