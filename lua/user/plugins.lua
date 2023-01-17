@@ -104,6 +104,7 @@ return packer.startup({ function(use)
   use 'tpope/vim-fugitive'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'mizlan/iswap.nvim'
+  use 'p00f/clangd_extensions.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

@@ -56,6 +56,6 @@ setuptool.setup({
                 },
             },
         },
-        clangd = {},
+        clangd = require('lsp-setup.clangd_extensions').setup({})
     }
 })
