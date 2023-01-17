@@ -18,7 +18,6 @@ require "user.whichkey"
 require 'user.indentline'
 require 'user.autocommands'
 require 'user.alpha'
---[[ require 'user.wilder' ]]
 require 'user.symbols_outline'
 require 'user.nvim-ufo'
 require 'user.hop_nvim'
