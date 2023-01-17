@@ -104,6 +104,8 @@ return packer.startup({ function(use)
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'mizlan/iswap.nvim'
   use 'p00f/clangd_extensions.nvim'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use 'mfussenegger/nvim-dap-python'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
