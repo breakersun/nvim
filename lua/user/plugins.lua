@@ -17,22 +17,17 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
+if not status_ok then return end
 
 -- Install your plugins here
 return packer.startup({ function(use)
-  -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use 'lewis6991/impatient.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use { 'gelguy/wilder.nvim', run = ':UpdateRemotePlugins' }
-  -- use 'vim-airline/vim-airline'
   use 'folke/tokyonight.nvim'
   use 'machakann/vim-highlightedyank'
   use 'goolord/alpha-nvim'
@@ -92,11 +87,9 @@ return packer.startup({ function(use)
   use { 'nvim-telescope/telescope-ui-select.nvim' }
   use { 'nvim-telescope/telescope-project.nvim' }
   use { 'RRethy/vim-illuminate' }
-  --[[ use 'dhananjaylatkar/cscope_maps.nvim' ]]
   use 'ivechan/gtags.vim'
   use {
     "utilyre/barbecue.nvim",
-    --[[ branch = 'dev', ]]
     requires = {
       "neovim/nvim-lspconfig",
       "smiteshp/nvim-navic",
