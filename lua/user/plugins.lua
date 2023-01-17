@@ -90,7 +90,6 @@ return packer.startup({ function(use)
     use 'tpope/vim-dispatch'
     use {'nvim-telescope/telescope-ui-select.nvim' }
     use {'nvim-telescope/telescope-project.nvim' }
-    use { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" }
     use {'RRethy/vim-illuminate'}
     --[[ use 'dhananjaylatkar/cscope_maps.nvim' ]]
     use 'ivechan/gtags.vim'
