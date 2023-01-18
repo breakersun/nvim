@@ -96,14 +96,22 @@ local mappings = {
   ["Q"] = { "<cmd>qall<CR>", "Quit All" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["C"] = { "<cmd>cclose<cr>", "Close Quickfix" },
-  --[[ ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" }, ]]
-  ["f"] = {
-    function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false }) end,
-    "Find files",
-  },
-  ["F"] = { "<cmd>Telescope grep_string theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
 
+  f = {
+    name = 'Search',
+    c = { require('telescope.builtin').commands, 'Commands' },
+    f = {
+      function()
+        require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false })
+      end,
+      "Find files",
+    },
+    g = { require('telescope.builtin').grep_string, "Grep"},
+    h = { require('telescope.builtin').help_tags, "Help"},
+    k = { require('telescope.builtin').keymaps, "Keymaps"},
+    m = { require('telescope.builtin').git_commits, "Git Commits"},
+  },
   d = {
     name = 'Debugger',
     b = { require('dap').toggle_breakpoint, 'Toggle Breakpoint' },
