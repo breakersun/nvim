@@ -97,20 +97,11 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["C"] = { "<cmd>cclose<cr>", "Close Quickfix" },
   ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
-
-  f = {
-    name = 'Search',
-    c = { require('telescope.builtin').commands, 'Commands' },
-    f = {
+  ["f"] = {
       function()
         require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false })
       end,
       "Find files",
-    },
-    g = { require('telescope.builtin').grep_string, "Grep"},
-    h = { require('telescope.builtin').help_tags, "Help"},
-    k = { require('telescope.builtin').keymaps, "Keymaps"},
-    m = { require('telescope.builtin').git_commits, "Git Commits"},
   },
   d = {
     name = 'Debugger',
@@ -148,8 +139,8 @@ local mappings = {
     s = { gitsigns.stage_hunk, "Stage Hunk" },
     u = { gitsigns.undo_stage_hunk, "Undo Stage Hunk", },
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+    b = { require('telescope.builtin').git_branches, "Checkout branch" },
+    c = { require('telescope.builtin').git_commits, "Checkout Commits" },
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
   },
 
@@ -162,14 +153,8 @@ local mappings = {
   l = {
     name = "LSP",
     a = { vim.lsp.buf.code_action, "Code Action" },
-    d = {
-      "<cmd>Telescope diagnostics bufnr=0<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
+    d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics", },
+    w = { require('telescope.builtin').diagnostics, "Workspace Diagnostics", },
     f = { vim.lsp.buf.formatting, "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     m = { "<cmd>Mason<cr>", "Mason" },
@@ -178,22 +163,18 @@ local mappings = {
     l = { vim.lsp.codelens.run, "CodeLens Action" },
     q = { vim.lsp.diagnostic.set_loclist, "Quickfix" },
     r = { vim.lsp.buf.rename, "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
+    s = { require('telescope.builtin').lsp_document_symbols, "Document Symbols" },
+    S = { require('telescope.builtin').lsp_dynamic_workspace_symbols, "Document Symbols" },
   },
   s = {
     name = "Search",
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    R = { "<cmd>Telescope registers<cr>", "Registers" },
-    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    c = { require('telescope.builtin').commands, "Commands" },
+    g = { require('telescope.builtin').grep_string, "Grep"},
+    h = { require('telescope.builtin').help_tags, "Find Help" },
+    m = { require('telescope.builtin').man_pages, "Man Pages" },
+    r = { require('telescope.builtin').oldfiles, "Open Recent File" },
+    R = { require('telescope.builtin').registers, "Registers" },
+    k = { require('telescope.builtin').keymaps, "Keymaps" },
   },
 
   t = {
