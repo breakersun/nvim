@@ -106,6 +106,7 @@ return packer.startup({ function(use)
   use 'p00f/clangd_extensions.nvim'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'mfussenegger/nvim-dap-python'
+  use 'simrat39/symbols-outline.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
