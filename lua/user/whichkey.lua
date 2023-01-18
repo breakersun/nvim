@@ -165,6 +165,7 @@ local mappings = {
     r = { vim.lsp.buf.rename, "Rename" },
     s = { require('telescope.builtin').lsp_document_symbols, "Document Symbols" },
     S = { require('telescope.builtin').lsp_dynamic_workspace_symbols, "Document Symbols" },
+    o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline"},
   },
   s = {
     name = "Search",
