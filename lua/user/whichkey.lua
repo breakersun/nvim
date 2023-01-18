@@ -103,6 +103,7 @@ local mappings = {
       end,
       "Find files",
   },
+  ['h'] = { require('hop').hint_char2, "Hop" },
   d = {
     name = 'Debugger',
     b = { require('dap').toggle_breakpoint, 'Toggle Breakpoint' },
