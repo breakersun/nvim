@@ -117,6 +117,7 @@ local mappings = {
           'Print Point'
     },
     r = { require('dap').repl.open, 'Open Repl'},
+    t = { require('dap').terminate, 'Terminate Debug'},
   },
   p = {
     name = "Packer",
