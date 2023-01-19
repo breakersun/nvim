@@ -1,6 +1,5 @@
 return {
   "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
-  "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
   "lukas-reineke/indent-blankline.nvim",
   'folke/tokyonight.nvim',
   'machakann/vim-highlightedyank',
@@ -25,7 +24,7 @@ return {
     }
   },
   -- Telescope
-  "nvim-telescope/telescope.nvim",
+  {"nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim"},
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
