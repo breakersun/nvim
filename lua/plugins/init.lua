@@ -61,17 +61,6 @@ return {
   { 'nvim-telescope/telescope-project.nvim' },
   { 'RRethy/vim-illuminate' },
   'ivechan/gtags.vim',
-  {
-    "utilyre/barbecue.nvim",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "smiteshp/nvim-navic",
-      "kyazdani42/nvim-web-devicons", -- optional
-    },
-    config = function()
-      require("barbecue").setup()
-    end,
-  },
   'junegunn/vim-easy-align',
   'tpope/vim-unimpaired',
   'tpope/vim-fugitive',
