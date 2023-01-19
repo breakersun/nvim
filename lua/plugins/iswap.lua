@@ -47,5 +47,7 @@ return {
       hl_grey_priority = '1000',
     }
   end,
-  lazy = true,
+  cmd = {
+    'ISwap', 'ISwapWith', 'ISwapNode', 'ISwapNodeWith'
+  }
 }
