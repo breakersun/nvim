@@ -36,8 +36,6 @@ return {
   "p00f/nvim-ts-rainbow",
   -- autopairs
   "windwp/nvim-autopairs",
-  -- comment
-  "numToStr/Comment.nvim",
   -- git
   "lewis6991/gitsigns.nvim",
   -- bufferline
