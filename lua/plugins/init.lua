@@ -76,7 +76,6 @@ return {
   'tpope/vim-unimpaired',
   'tpope/vim-fugitive',
   'nvim-treesitter/nvim-treesitter-textobjects',
-  'mizlan/iswap.nvim',
   'p00f/clangd_extensions.nvim',
   { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
   'mfussenegger/nvim-dap-python',
