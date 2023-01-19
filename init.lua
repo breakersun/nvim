@@ -8,7 +8,6 @@ require "user.telescope"
 require "user.treesitter"
 require "user.autopairs"
 require "user.gitsigns"
-require "user.bufferline"
 --[[ require "user.lsp.null-ls" ]]
 require "user.toggleterm"
 require "user.nvim-tree"

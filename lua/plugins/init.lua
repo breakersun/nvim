@@ -38,8 +38,6 @@ return {
   "windwp/nvim-autopairs",
   -- git
   "lewis6991/gitsigns.nvim",
-  -- bufferline
-  { 'akinsho/bufferline.nvim', tag = "v3.*", dependencies = 'kyazdani42/nvim-web-devicons' },
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
