@@ -29,10 +29,11 @@ return {
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     dependencies =
-      {'nvim-treesitter/nvim-treesitter-textobjects'}
+      {'nvim-treesitter/nvim-treesitter-textobjects'},
+    event = "BufReadPost",
   },
-  "JoosepAlviste/nvim-ts-context-commentstring",
-  "p00f/nvim-ts-rainbow",
+  {"JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPost",},
+  {"p00f/nvim-ts-rainbow", event = "BufReadPost",},
   -- autopairs
   "windwp/nvim-autopairs",
   -- git
@@ -51,16 +52,14 @@ return {
   { 'phaazon/hop.nvim', branch = 'v2', },
   { "iamcco/markdown-preview.nvim", build = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
-  'ferrine/md-img-paste.vim',
-  'sotte/presenting.vim',
+  {'ferrine/md-img-paste.vim', ft = {"markdown"}},
   'tpope/vim-dispatch',
   { 'nvim-telescope/telescope-ui-select.nvim' },
   { 'nvim-telescope/telescope-project.nvim' },
-  'ivechan/gtags.vim',
-  'junegunn/vim-easy-align',
-  'tpope/vim-unimpaired',
+  {'ivechan/gtags.vim', event = "BufReadPost"},
+  {'junegunn/vim-easy-align', event = "BufReadPost",},
+  {'tpope/vim-unimpaired', event = "BufReadPost",},
   'tpope/vim-fugitive',
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  'p00f/clangd_extensions.nvim',
-  'simrat39/symbols-outline.nvim',
+  {'p00f/clangd_extensions.nvim', event = "BufReadPost",},
+  {'simrat39/symbols-outline.nvim', event = "BufReadPost",},
 }
