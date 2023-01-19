@@ -147,7 +147,12 @@ local mappings = {
     a = { vim.lsp.buf.code_action, "Code Action" },
     d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics", },
     w = { require('telescope.builtin').diagnostics, "Workspace Diagnostics", },
-    f = { vim.lsp.buf.formatting, "Format" },
+    f = {
+      function ()
+        vim.lsp.buf.format { async = true }
+      end,
+      "Format"
+    },
     i = { "<cmd>LspInfo<cr>", "Info" },
     m = { "<cmd>Mason<cr>", "Mason" },
     j = { vim.diagnostic.goto_next, "Next Diagnostic", },
