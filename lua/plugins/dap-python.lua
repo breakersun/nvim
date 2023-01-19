@@ -1,11 +1,3 @@
-
-local _status_ok, dap_python = pcall(require, 'dap-python')
-if not _status_ok then
-  return
-end
-
-dap_python.setup('python')
-
 --[[ table.insert(require('dap').configurations.python, { ]]
 --[[   type = 'python', ]]
 --[[   request = 'launch', ]]
@@ -13,3 +5,15 @@ dap_python.setup('python')
 --[[   program = '${file}', ]]
 --[[   -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings ]]
 --[[ }) ]]
+--
+return {
+  'mfussenegger/nvim-dap-python',
+  ft = { "python" },
+  config = function()
+    local _status_ok, dap_python = pcall(require, 'dap-python')
+    if not _status_ok then
+      return
+    end
+    dap_python.setup('python')
+  end
+}
