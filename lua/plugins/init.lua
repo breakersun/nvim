@@ -61,5 +61,4 @@ return {
   {'tpope/vim-unimpaired', event = "BufReadPost",},
   'tpope/vim-fugitive',
   {'p00f/clangd_extensions.nvim', event = "BufReadPost",},
-  {'simrat39/symbols-outline.nvim', event = "BufReadPost",},
 }
