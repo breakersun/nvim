@@ -57,7 +57,6 @@ return {
   'tpope/vim-dispatch',
   { 'nvim-telescope/telescope-ui-select.nvim' },
   { 'nvim-telescope/telescope-project.nvim' },
-  { 'RRethy/vim-illuminate' },
   'ivechan/gtags.vim',
   'junegunn/vim-easy-align',
   'tpope/vim-unimpaired',
