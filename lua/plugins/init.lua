@@ -47,7 +47,6 @@ return {
   'nvim-lualine/lualine.nvim',
   -- whichkey
   "folke/which-key.nvim",
-  'machakann/vim-sandwich',
   'tpope/vim-sleuth',
   { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
   { 'danymat/neogen', dependencies = "nvim-treesitter/nvim-treesitter", },
