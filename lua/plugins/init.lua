@@ -49,7 +49,6 @@ return {
   "folke/which-key.nvim",
   'tpope/vim-sleuth',
   { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
-  { 'danymat/neogen', dependencies = "nvim-treesitter/nvim-treesitter", },
   { 'phaazon/hop.nvim', branch = 'v2', },
   { "iamcco/markdown-preview.nvim", build = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
@@ -65,7 +64,5 @@ return {
   'tpope/vim-fugitive',
   'nvim-treesitter/nvim-treesitter-textobjects',
   'p00f/clangd_extensions.nvim',
-  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
-  'mfussenegger/nvim-dap-python',
   'simrat39/symbols-outline.nvim',
 }
