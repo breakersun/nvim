@@ -103,7 +103,6 @@ local mappings = {
       end,
       "Find files",
   },
-  ['h'] = { require('hop').hint_char2, "Hop" },
   d = {
     name = 'Debugger',
     b = { require('dap').toggle_breakpoint, 'Toggle Breakpoint' },
@@ -118,14 +117,6 @@ local mappings = {
     },
     r = { require('dap').repl.open, 'Open Repl'},
     t = { require('dap').terminate, 'Terminate Debug'},
-  },
-  p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
   g = {
