@@ -8,5 +8,4 @@ return {
   config = function()
     require("barbecue").setup()
   end,
-  keys = {'s', mode = 'n'}
 }
