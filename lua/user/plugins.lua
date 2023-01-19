@@ -20,7 +20,6 @@ if not status_ok then return end
 lazy.setup({
   "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
   "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
-  'lewis6991/impatient.nvim',
   "lukas-reineke/indent-blankline.nvim",
   'folke/tokyonight.nvim',
   'machakann/vim-highlightedyank',
@@ -62,7 +61,7 @@ lazy.setup({
   -- git
   "lewis6991/gitsigns.nvim",
   -- bufferline
-  { 'akinsho/bufferline.nvim', tag = "v2.*", dependencies = 'kyazdani42/nvim-web-devicons' },
+  { 'akinsho/bufferline.nvim', tag = "v3.*", dependencies = 'kyazdani42/nvim-web-devicons' },
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
