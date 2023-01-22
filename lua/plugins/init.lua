@@ -32,8 +32,6 @@ return {
   },
   {"JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPost",},
   {"p00f/nvim-ts-rainbow", event = "BufReadPost",},
-  -- autopairs
-  "windwp/nvim-autopairs",
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
