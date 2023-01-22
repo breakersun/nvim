@@ -41,8 +41,6 @@ return {
   "akinsho/toggleterm.nvim",
   -- nvim-tree
   { 'kyazdani42/nvim-tree.lua', dependencies = 'kyazdani42/nvim-web-devicons', tag = 'nightly' },
-  -- lua-line
-  'nvim-lualine/lualine.nvim',
   -- whichkey
   "folke/which-key.nvim",
   {'tpope/vim-sleuth', event = "BufReadPost"},

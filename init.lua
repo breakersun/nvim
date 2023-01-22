@@ -10,7 +10,6 @@ require "user.gitsigns"
 --[[ require "user.lsp.null-ls" ]]
 require "user.toggleterm"
 require "user.nvim-tree"
-require "user.lualine"
 require "user.whichkey"
 require 'user.autocommands'
 require 'user.lsp-setup'
