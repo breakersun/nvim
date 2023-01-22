@@ -34,8 +34,6 @@ return {
   {"p00f/nvim-ts-rainbow", event = "BufReadPost",},
   -- autopairs
   "windwp/nvim-autopairs",
-  -- git
-  "lewis6991/gitsigns.nvim",
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
