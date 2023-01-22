@@ -41,8 +41,6 @@ return {
   "akinsho/toggleterm.nvim",
   -- nvim-tree
   { 'kyazdani42/nvim-tree.lua', dependencies = 'kyazdani42/nvim-web-devicons', tag = 'nightly' },
-  -- whichkey
-  "folke/which-key.nvim",
   {'tpope/vim-sleuth', event = "BufReadPost"},
   { "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
