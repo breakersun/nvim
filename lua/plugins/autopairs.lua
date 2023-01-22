@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-autopairs",
-  event = "VeryLazy",
+  event = "BufReadPost",
   config = function()
 
     -- Setup nvim-cmp.
