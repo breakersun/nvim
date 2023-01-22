@@ -15,7 +15,5 @@ return {
       },
     })
   end,
-  keys = {
-   'j', 'k', 'l', 'h'
-  }
+  event = "BufReadPost",
 }
