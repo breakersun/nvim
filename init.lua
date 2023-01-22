@@ -14,6 +14,4 @@ require "user.lualine"
 require "user.whichkey"
 require 'user.indentline'
 require 'user.autocommands'
-require 'user.nvim-ufo'
-require 'user.markdown-preview'
 require 'user.lsp-setup'

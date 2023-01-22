@@ -48,8 +48,6 @@ return {
   -- whichkey
   "folke/which-key.nvim",
   'tpope/vim-sleuth',
-  { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
-  { 'phaazon/hop.nvim', branch = 'v2', },
   { "iamcco/markdown-preview.nvim", build = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
   {'ferrine/md-img-paste.vim', ft = {"markdown"}},
