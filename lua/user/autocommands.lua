@@ -6,7 +6,7 @@ vim.cmd [[
   autocmd FileType make set noexpandtab
   autocmd FileType markdown nmap <buffer><silent> <leader>mp :call mdip#MarkdownClipboardImage()<CR>
   autocmd BufNewFile,BufRead *.h setlocal filetype=c
-  autocmd FileType c,cpp,python,lua autocmd BufWritePre <buffer> %s/\s\+$//e
+  autocmd FileType c,cpp,python,lua,markdown autocmd BufWritePre <buffer> %s/\s\+$//e
   augroup end
 ]]
 

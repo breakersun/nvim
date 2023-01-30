@@ -34,7 +34,6 @@ return {
   "akinsho/toggleterm.nvim",
   -- nvim-tree
   { 'kyazdani42/nvim-tree.lua', dependencies = 'kyazdani42/nvim-web-devicons', tag = 'nightly' },
-  { 'tpope/vim-sleuth', event = "BufReadPost" },
   { "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
