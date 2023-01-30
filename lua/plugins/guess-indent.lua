@@ -1,6 +1,7 @@
 
 return {
   'nmac427/guess-indent.nvim',
+  event = "BufReadPost",
   config = function()
     -- This is the default configuration
     require('guess-indent').setup {
