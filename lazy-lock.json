@@ -20,6 +20,7 @@
   "iswap.nvim": { "branch": "master", "commit": "f4935e477c3dd8914a008884c4d83388d024487a" },
   "lazy.nvim": { "branch": "main", "commit": "15fe46a728b7473d4cae368838bbc1c79c3a3f48" },
   "lsp-setup.nvim": { "branch": "main", "commit": "39ee4a24206aec44d2e464797e48d673b92a3c6c" },
+  "lspsaga.nvim": { "branch": "main", "commit": "54725e87bdc3adf6cd609a5f54c03ef08091b1f2" },
   "lualine.nvim": { "branch": "master", "commit": "0050b308552e45f7128f399886c86afefc3eb988" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "422b9745143150e16cd3fe331c74f6737de75e72" },

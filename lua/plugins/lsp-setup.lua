@@ -4,11 +4,13 @@ return {
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+    'glepnir/lspsaga.nvim'
   },
   config = function()
     local _, setuptool = pcall(require, 'lsp-setup')
     if not _ then return end
 
+    require("lspsaga").setup({})
     -- UI settings for lsp
     require('user.lsp-ui').setup()
 
@@ -16,8 +18,9 @@ return {
       default_mappings = false,
       mappings = {
         gD = 'lua vim.lsp.buf.declaration()',
-        gd = 'lua vim.lsp.buf.definition()',
-        --[[ gt = 'lua vim.lsp.buf.type_definition()', ]]
+        --[[ gd = 'lua vim.lsp.buf.definition()', ]]
+        gd = 'Lspsaga peek_definition',
+       --[[ gt = 'lua vim.lsp.buf.type_definition()', ]]
         gi = 'lua vim.lsp.buf.implementation()',
         gr = 'lua vim.lsp.buf.references()',
         K = 'lua vim.lsp.buf.hover()',
