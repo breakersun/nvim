@@ -171,7 +171,8 @@ return {
       s = {
         name = "Search",
         c = { require('telescope.builtin').commands, "Commands" },
-        g = { require('telescope.builtin').grep_string, "Grep" },
+        s = { require('telescope.builtin').grep_string, "Grep String" },
+        g = { require('telescope.builtin').live_grep, "Live Grep" },
         h = { require('telescope.builtin').help_tags, "Find Help" },
         m = { require('telescope.builtin').man_pages, "Man Pages" },
         r = { require('telescope.builtin').oldfiles, "Open Recent File" },
