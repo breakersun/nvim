@@ -7,4 +7,3 @@ require "user.treesitter"
 require "user.toggleterm"
 require "user.nvim-tree"
 require 'user.autocommands'
-require 'user.lsp-setup'

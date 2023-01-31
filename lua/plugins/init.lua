@@ -8,16 +8,6 @@ return {
     end,
   },
   'machakann/vim-highlightedyank',
-  -- LSP
-  'neovim/nvim-lspconfig',
-  {
-    'breakersun/lsp-setup.nvim',
-    dependencies = {
-      'neovim/nvim-lspconfig',
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
-    }
-  },
   -- Telescope
   { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
   -- Treesitter
