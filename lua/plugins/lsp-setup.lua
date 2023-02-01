@@ -4,7 +4,8 @@ return {
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'glepnir/lspsaga.nvim'
+    'SmiteshP/nvim-navic',
+    'glepnir/lspsaga.nvim',
   },
   config = function()
     local _, setuptool = pcall(require, 'lsp-setup')
