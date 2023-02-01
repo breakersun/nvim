@@ -11,7 +11,8 @@ return {
     local _, setuptool = pcall(require, 'lsp-setup')
     if not _ then return end
 
-    require("lspsaga").setup({})
+    local saga = require("lspsaga")
+    saga.setup({ ui = {border = "rounded"}})
     -- UI settings for lsp
     require('user.lsp-ui').setup()
 
@@ -22,11 +23,12 @@ return {
         gd = 'Lspsaga peek_definition',
         gi = 'lua vim.lsp.buf.implementation()',
         gr = 'lua vim.lsp.buf.references()',
-        K = 'lua vim.lsp.buf.hover()',
+        gh = 'Lspsaga lsp_finder',
+        K = 'Lspsaga hover_doc',
         ['<C-k>'] = 'lua vim.lsp.buf.signature_help()',
-        ['gl'] = 'lua vim.diagnostic.open_float()',
-        ['[d'] = 'lua vim.diagnostic.goto_prev()',
-        [']d'] = 'lua vim.diagnostic.goto_next()',
+        ['gl'] = 'Lspsaga show_line_diagnostics',
+        ['[d'] = 'Lspsaga diagnostic_jump_prev',
+        [']d'] = 'Lspsaga diagnostic_jump_next',
         -- <leader>xx are defined in whichkey
         --[[ ['<leader>rn'] = 'lua vim.lsp.buf.rename()', ]]
         --[[ ['<leader>la'] = 'lua vim.lsp.buf.code_action()', ]]

@@ -148,7 +148,7 @@ return {
 
       l = {
         name = "LSP",
-        a = { vim.lsp.buf.code_action, "Code Action" },
+        a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
         d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics", },
         w = { require('telescope.builtin').diagnostics, "Workspace Diagnostics", },
         f = {
@@ -159,14 +159,15 @@ return {
         },
         i = { "<cmd>LspInfo<cr>", "Info" },
         m = { "<cmd>Mason<cr>", "Mason" },
-        j = { vim.diagnostic.goto_next, "Next Diagnostic", },
-        k = { vim.diagnostic.goto_prev, "Prev Diagnostic", },
+        --[[ j = { vim.diagnostic.goto_next, "Next Diagnostic", }, ]]
+        --[[ k = { vim.diagnostic.goto_prev, "Prev Diagnostic", }, ]]
         l = { vim.lsp.codelens.run, "CodeLens Action" },
         q = { vim.lsp.diagnostic.set_loclist, "Quickfix" },
-        r = { vim.lsp.buf.rename, "Rename" },
+        r = { "<cmd>Lspsaga rename<CR>", "Rename" },
+        R = { "<cmd>Lspsaga rename ++project<CR>", "Global Rename" },
         s = { require('telescope.builtin').lsp_document_symbols, "Document Symbols" },
         S = { require('telescope.builtin').lsp_dynamic_workspace_symbols, "Document Symbols" },
-        o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
+        o = { "<cmd>Lspsaga outline<cr>", "Symbols Outline" },
       },
       s = {
         name = "Search",
