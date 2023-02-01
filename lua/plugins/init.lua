@@ -36,6 +36,7 @@ return {
   { 'ivechan/gtags.vim', event = "BufReadPost" },
   { 'junegunn/vim-easy-align', event = "BufReadPost", },
   { 'tpope/vim-unimpaired', event = "BufReadPost", },
+  { 'tpope/vim-sleuth', event = "BufReadPost" },
   'tpope/vim-fugitive',
   { 'p00f/clangd_extensions.nvim', event = "BufReadPost", },
 }
