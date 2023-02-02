@@ -12,7 +12,10 @@ return {
     if not _ then return end
 
     local saga = require("lspsaga")
-    saga.setup({ ui = {border = "rounded"}})
+    saga.setup({
+      ui = {border = "rounded"},
+      symbol_in_winbar = { enable = false,}
+    })
     -- UI settings for lsp
     require('user.lsp-ui').setup()
 
