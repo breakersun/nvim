@@ -26,7 +26,7 @@ return {
   { 'kyazdani42/nvim-tree.lua', dependencies = 'kyazdani42/nvim-web-devicons', tag = 'nightly' },
   { "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
     ft = { "markdown" },
   },
   { 'ferrine/md-img-paste.vim', ft = { "markdown" } },
