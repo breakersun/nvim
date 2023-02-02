@@ -40,6 +40,7 @@
   "nvim-ufo": { "branch": "main", "commit": "ca5946c17fb4abae6fc210a9dc4b97e57e7eecd2" },
   "nvim-web-devicons": { "branch": "master", "commit": "a421d183ef37dfa13f51a5805bed2381aebf9080" },
   "plenary.nvim": { "branch": "master", "commit": "9a0d3bf7b832818c042aaf30f692b081ddd58bd9" },
+  "presenting.vim": { "branch": "master", "commit": "e960e204d8e4526d2650c23eaea908317c6becb9" },
   "promise-async": { "branch": "main", "commit": "842dca33e6b1af7bedcefc72cffbc807d54dbfca" },
   "symbols-outline.nvim": { "branch": "master", "commit": "512791925d57a61c545bc303356e8a8f7869763c" },
   "telescope-project.nvim": { "branch": "master", "commit": "8e8ee37b7210761502cdf2c3a82b5ba8fb5b2972" },

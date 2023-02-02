@@ -21,3 +21,10 @@ vim.cmd [[
     autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
     command! Cheader call <SID>insert_gates()
 ]]
+
+vim.cmd [[
+  augroup _presenting_markdown
+  autocmd!
+  au FileType markdown let b:presenting_slide_separator = '\v(^|\n)\ze#{1,2}[^#]'
+  augroup end
+]]
