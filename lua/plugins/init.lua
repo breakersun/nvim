@@ -41,4 +41,5 @@ return {
   { 'p00f/clangd_extensions.nvim', event = "BufReadPost", },
   { 'sotte/presenting.vim' , cmd = 'PresentingStart'},
   { 'AndrewRadev/switch.vim', keys = { 'gs', mode = "n" }, },
+  { 'Neur1n/neuims', cmd = 'IMSToggle'},
 }
