@@ -42,4 +42,5 @@ return {
   { 'sotte/presenting.vim' , cmd = 'PresentingStart'},
   { 'AndrewRadev/switch.vim', keys = { 'gs', mode = "n" }, },
   { 'Neur1n/neuims', cmd = 'IMSToggle'},
+  { 'tpope/vim-repeat' },
 }

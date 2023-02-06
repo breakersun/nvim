@@ -149,6 +149,7 @@ return {
       l = {
         name = "LSP",
         a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
+        c = { '<cmd>NodeAction<CR>', 'Node Action'},
         d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics", },
         w = { require('telescope.builtin').diagnostics, "Workspace Diagnostics", },
         f = {
