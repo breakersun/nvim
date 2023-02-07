@@ -40,7 +40,12 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+
+-- better paste
+keymap("v", "p", '"_dp', opts)
+keymap("v", "P", '"_dP', opts)
+keymap('n', ',p', '"0p', opts)
+keymap('n', ',P', '"0P', opts)
 
 -- Visual Block --
 -- Move text up and down
