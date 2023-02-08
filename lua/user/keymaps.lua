@@ -46,6 +46,9 @@ keymap("v", "p", '"_dp', opts)
 keymap("v", "P", '"_dP', opts)
 keymap('n', ',p', '"0p', opts)
 keymap('n', ',P', '"0P', opts)
+-- delete character don't yank
+keymap('n', 'x', '"_x', opts)
+keymap('v', 'x', '"_x', opts)
 
 -- Visual Block --
 -- Move text up and down
