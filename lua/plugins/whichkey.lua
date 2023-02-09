@@ -100,6 +100,7 @@ return {
       ["Q"] = { "<cmd>qall<CR>", "Quit All" },
       ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
       ["C"] = { "<cmd>cclose<cr>", "Close Quickfix" },
+      ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
       ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
       ["f"] = {
         function()
