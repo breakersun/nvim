@@ -23,7 +23,7 @@ return {
       default_mappings = false,
       mappings = {
         gD = 'lua vim.lsp.buf.declaration()',
-        gd = 'Lspsaga peek_definition',
+        gd = 'lua vim.lsp.buf.definition()',
         gi = 'lua vim.lsp.buf.implementation()',
         gr = 'lua vim.lsp.buf.references()',
         gh = 'Lspsaga lsp_finder',
