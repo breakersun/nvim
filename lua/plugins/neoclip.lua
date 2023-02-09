@@ -2,10 +2,13 @@ return {
   "AckslD/nvim-neoclip.lua",
   requires = {
     {'kkharji/sqlite.lua', module = 'sqlite'},
-    {'nvim-telescope/telescope.nvim'},
   },
   config = function()
-    require('neoclip').setup()
+    require('neoclip').setup({
+      filter = function(data)
+        return data.event.operator ~= ('d' or 'c')
+      end,
+    })
   end,
   event = 'VeryLazy',
 }
