@@ -207,8 +207,18 @@ return {
       ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
     }
 
+    local second_opts = {
+      mode = "n", prefix = ",", buffer = nil, silent = true,
+      noremap = true, nowait = true,
+    }
+
+    local second_mappings = {
+      ["s"] = { "<cmd>lua require('substitute').operator()<cr>", "Substitute" },
+    }
+
     which_key.setup(setup)
     which_key.register(mappings, opts)
     which_key.register(vmappings, vopts)
+    which_key.register(second_mappings, second_opts)
   end
 }
