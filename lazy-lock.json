@@ -30,6 +30,7 @@
   "nvim-autopairs": { "branch": "master", "commit": "5a3523ddb573804752de6c021c5cb82e267b79ca" },
   "nvim-cmp": { "branch": "main", "commit": "cfafe0a1ca8933f7b7968a287d39904156f2c57d" },
   "nvim-dap": { "branch": "master", "commit": "0e376f00e7fac143e29e1017d2ac2cc3df13d185" },
+  "nvim-dap-cortex-debug": { "branch": "master", "commit": "2ad48e7a6a77e456a02d0ec402c99c9a6d810461" },
   "nvim-dap-python": { "branch": "master", "commit": "d4400d075c21ed8fb8e8ac6a5ff56f58f6e93531" },
   "nvim-dap-ui": { "branch": "master", "commit": "885e958ff9de30cfbc359259eccf28cc493ad46b" },
   "nvim-lspconfig": { "branch": "master", "commit": "4d7fa46e0be1f351559c343d0729e3ff3a454440" },
