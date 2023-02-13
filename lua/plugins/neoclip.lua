@@ -8,6 +8,7 @@ return {
       filter = function(data)
         return data.event.operator ~= ('d' or 'c')
       end,
+      preview = false,
     })
   end,
   event = 'VeryLazy',
