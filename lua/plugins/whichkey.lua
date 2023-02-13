@@ -104,7 +104,7 @@ return {
       ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
       ["f"] = {
         function()
-          require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { previewer = false })
+          require('telescope.builtin').find_files( require('telescope.themes').get_dropdown { previewer = false })
         end,
         "Find files",
       },

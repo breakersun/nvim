@@ -78,7 +78,9 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
-    find_files = { hidden = true },
+		find_files = { -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+		},
   },
   extensions = {
     -- Your extension configuration goes here:
