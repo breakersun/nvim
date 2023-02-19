@@ -4,8 +4,8 @@ return {
 
   config = function()
     require('dap-cortex-debug').setup {
-      debug = true,
-      extension_path = 'C:/Users/403283/scoop/apps/vscode/current/data/extensions/marus25.cortex-debug-1.6.10/',
+      debug = false,
+      extension_path = 'C:/Users/403283/scoop/apps/vscode/current/data/extensions/marus25.cortex-debug-1.6.10',
     }
 
     local dap_cortex_debug = require('dap-cortex-debug')
