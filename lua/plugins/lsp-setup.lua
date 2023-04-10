@@ -45,7 +45,7 @@ return {
         end
       end,
       servers = {
-        sumneko_lua = {
+        lua_ls = {
           settings = {
             Lua = {
               runtime = { version = 'LuaJIT', },
