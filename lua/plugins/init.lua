@@ -33,7 +33,7 @@ return {
   'tpope/vim-dispatch',
   { 'nvim-telescope/telescope-ui-select.nvim' },
   { 'nvim-telescope/telescope-project.nvim' },
-  { 'ivechan/gtags.vim', event = "BufReadPost" },
+  --[[ { 'ivechan/gtags.vim', event = "BufReadPost" }, ]]
   { 'junegunn/vim-easy-align', event = "BufReadPost", },
   { 'tpope/vim-unimpaired', event = "BufReadPost", },
   { 'tpope/vim-sleuth', event = "BufReadPost" },
