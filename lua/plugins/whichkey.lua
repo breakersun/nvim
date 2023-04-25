@@ -99,7 +99,6 @@ return {
       ["q"] = { "<cmd>q!<CR>", "Quit" },
       ["Q"] = { "<cmd>qall<CR>", "Quit All" },
       ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-      ["C"] = { "<cmd>cclose<cr>", "Close Quickfix" },
       ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
       ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
       ["f"] = {
@@ -214,6 +213,23 @@ return {
 
     local second_mappings = {
       ["s"] = { "<cmd>lua require('substitute').operator()<cr>", "Substitute" },
+      ["l"] = {
+        function ()
+          local win = vim.api.nvim_get_current_win()
+          local qf_wind = vim.fn.getloclist(win, {winid = 0}).winid
+          local action = qf_wind > 0 and 'lclose' or 'lopen'
+          vim.cmd(action)
+        end,
+        "Toggle Location List"
+      },
+      ['q'] = {
+        function ()
+          local qf_wind = vim.fn.getqflist( {winid = 0}).winid
+          local action = qf_wind > 0 and 'cclose' or 'copen'
+          vim.cmd(action)
+        end,
+        "Toggle Quickfix"
+      }
     }
 
     which_key.setup(setup)
