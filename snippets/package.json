@@ -13,6 +13,12 @@
 					"lua"
 				],
 				"path": "./lua.json"
+			},
+			{
+				"language": [
+					"plantuml"
+				],
+				"path": "./plantuml.json"
 			}
 		]
 	}
