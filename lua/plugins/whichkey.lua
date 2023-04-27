@@ -229,6 +229,16 @@ return {
           vim.cmd(action)
         end,
         "Toggle Quickfix"
+      },
+      p = {
+        name = "Pandoc",
+        b = {
+          function ()
+            vim.g.papyrus_pandoc_args  = '-t beamer --slide-level=2'
+          end,
+          "Beamer Enable"
+        },
+        c = { "<cmd>PapyrusStart<cr>", "Compile" },
       }
     }
 
