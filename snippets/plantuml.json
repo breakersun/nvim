@@ -27,5 +27,15 @@
 			"[$1] starts at [$2]'s end"
 		],
 		"description": "Task Starts at One's End"
+	},
+
+	"mind map": {
+		"prefix": "mindmap",
+		"body": [
+			"@startmindmap",
+			"*$1",
+			"\t*$2",
+			"@endmindmap"
+		]
 	}
 }
