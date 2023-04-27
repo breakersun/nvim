@@ -5,6 +5,21 @@
 			"expands? jumps? $1 $2 !"
 		]
 	},
+	"beamer": {
+		"prefix": "beamer",
+		"body": [
+			"---",
+			"title: $1",
+			"author: sunlong@tcl.com",
+			"theme: CambridgeUS",
+			"colortheme: dolphin",
+			"section-titles : true",
+			"navigation : horizontal",
+			"CJKmainfont: KaiTi",
+			"---"
+		],
+		"description": "Beamer Markdown Header"
+	},
 	"snip2": {
 		"prefix": "all2",
 		"body": [
