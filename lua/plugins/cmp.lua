@@ -23,6 +23,8 @@ return {
     end
 
     require("luasnip/loaders/from_vscode").lazy_load()
+    require("luasnip.loaders.from_vscode").load({paths = "./snippets"})
+
     luasnip.filetype_extend("markdown", { "markdown", "plantuml" })
 
     local check_backspace = function()
