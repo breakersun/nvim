@@ -167,7 +167,7 @@ return {
         r = { "<cmd>Lspsaga rename<CR>", "Rename" },
         R = { "<cmd>Lspsaga rename ++project<CR>", "Global Rename" },
         s = { "<CMD>Telescope lsp_document_symbols theme=ivy<CR>", "Document Symbols" },
-        S = { "<CMD>Telescope lsp_dynamic_workspace_symbols theme=ivy<CR>", "Document Symbols" },
+        S = { "<CMD>Telescope lsp_dynamic_workspace_symbols theme=ivy<CR>", "Workspace Symbols" },
         o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
       },
       s = {
