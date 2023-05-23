@@ -86,6 +86,7 @@ return {
     }
 
     local mappings = {
+      ["<space>"] = { "<cmd>HopChar2<CR>", "Hop 2 Char" },
       ["/"] = { function() require('Comment.api').toggle.linewise() end, "Comment" },
       ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
       ["b"] = {
