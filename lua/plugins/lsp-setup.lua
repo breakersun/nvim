@@ -19,6 +19,8 @@ return {
     -- UI settings for lsp
     require('user.lsp-ui').setup()
 
+    vim.lsp.set_log_level("off")
+
     setuptool.setup({
       default_mappings = false,
       mappings = {
