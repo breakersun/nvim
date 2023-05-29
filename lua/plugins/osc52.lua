@@ -1,7 +1,10 @@
 return {
   'ojroques/nvim-osc52',
-  --[[ cond = function () return not vim.fn.has('win32') end, ]]
-  cond = not vim.fn.has('win32'),
+  cond = function ()
+    local _linux = vim.fn.has('linux')
+    return _linux
+  end,
+  --[[ cond = vim.fn.has('win32'), ]]
   config = function()
     require('osc52').setup()
     local function copy()
