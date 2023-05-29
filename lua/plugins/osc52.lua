@@ -1,8 +1,10 @@
 return {
   'ojroques/nvim-osc52',
   cond = function ()
-    if vim.fn.has("win32") then return false
-    else return true end
+    if vim.fn.has("win32") then
+      return false
+    end
+    return true
   end,
   config = function()
     require('osc52').setup()
