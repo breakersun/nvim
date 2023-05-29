@@ -1,7 +1,7 @@
 return {
   'ojroques/nvim-osc52',
   cond = function ()
-    if vim.fn.has("win32") then
+    if vim.fn.has("win32") == 1 then
       return false
     end
     return true
