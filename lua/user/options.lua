@@ -39,8 +39,7 @@ local options = {
 
 vim.opt.shortmess:append "c"
 vim.opt.path:append "**" -- Provides tab-completion for all file-related tasks
-vim.opt.nrformats:append "alpha"
-
+vim.opt.nrformats:append "alpha,unsigned" -- treat 2012-01-15 15 as a unsigned number instead of -15
 
 for k, v in pairs(options) do
   vim.opt[k] = v
