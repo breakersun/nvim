@@ -3,6 +3,13 @@ if not status_ok then
     return
 end
 
+local _shell
+if vim.fn.has('win32') == 1 then
+  _shell = 'pwsh'
+else
+  _shell = 'fish'
+end
+
 toggleterm.setup({
     size = 20,
     open_mapping = [[<c-\>]],
@@ -15,7 +22,7 @@ toggleterm.setup({
     persist_size = true,
     direction = "float",
     close_on_exit = true,
-    shell = 'pwsh',
+    shell = _shell,
     float_opts = {
         border = "curved",
         winblend = 0,
