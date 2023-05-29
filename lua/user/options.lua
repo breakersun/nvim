@@ -24,6 +24,7 @@ local options = {
   cursorline = true, -- highlight the current line
   number = true, -- set numbered lines
   numberwidth = 4, -- set number column width to 2 {default 4}
+  relativenumber = true,
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   wrap = true, -- display lines as one long line
   scrolloff = 4,
@@ -38,6 +39,7 @@ local options = {
 
 vim.opt.shortmess:append "c"
 vim.opt.path:append "**" -- Provides tab-completion for all file-related tasks
+vim.opt.nrformats:append "alpha"
 
 
 for k, v in pairs(options) do
