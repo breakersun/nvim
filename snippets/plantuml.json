@@ -7,7 +7,7 @@
 			"saturday are closed",
 			"sunday are closed",
 			"",
-			"Porject starts ",
+			"Project starts $1",
 			"@endgantt"
 		],
 		"description": "Gantt Project Template"
