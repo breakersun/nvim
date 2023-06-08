@@ -10,7 +10,7 @@
 			"Project starts $1",
 			"@endgantt"
 		],
-		"description": "Gantt Project Template"
+		"description": "Gantt Project Template\nDate Format YYYY-MM-DD"
 	},
 
 	"task": {
@@ -19,6 +19,14 @@
 			"[$1] as [$2] lasts $3 days"
 		],
 		"description": "Task for Gantt Project"
+	},
+
+	"first task starts": {
+		"prefix": "startt1",
+		"body": [
+			"[$1] starts $2"
+		],
+		"description": "First Task Starts at $date \nDate Format YYYY-MM-DD"
 	},
 
 	"task starts": {
