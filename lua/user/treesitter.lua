@@ -15,6 +15,9 @@ configs.setup {
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
+    disable = function (lang, bufnr)
+      return vim.api.nvim_buf_line_count(bufnr) > 5000
+    end,
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml" } },
