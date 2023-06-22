@@ -1,5 +1,5 @@
 return {
-  'breakersun/lsp-setup.nvim',
+  'junnplus/lsp-setup.nvim',
   dependencies = {
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
@@ -62,7 +62,12 @@ return {
           },
         },
         clangd = {}
-      }
+      },
+    -- Configuration of LSP inlay hints
+    inlay_hints = {
+        enabled = false,
+        highlight = 'Comment',
+    }
     })
   end
 }
