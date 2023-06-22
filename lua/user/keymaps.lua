@@ -71,3 +71,6 @@ keymap('x', 'ga', '<Plug>(EasyAlign)', opts)
 keymap('n', 'ga', '<Plug>(EasyAlign)', opts)
 
 vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- reslect last yanked block
+keymap('n', 'gp', '`[v`]', opts)
