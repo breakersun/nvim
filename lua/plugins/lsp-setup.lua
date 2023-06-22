@@ -54,10 +54,7 @@ return {
         clangd = {}
       },
     -- Configuration of LSP inlay hints
-    inlay_hints = {
-        enabled = false,
-        highlight = 'Comment',
-    }
+    inlay_hints = { enabled = true, }
     })
   end
 }
