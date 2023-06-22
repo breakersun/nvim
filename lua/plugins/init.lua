@@ -36,7 +36,6 @@ return {
   { 'tpope/vim-unimpaired', event = "BufReadPost", },
   { 'tpope/vim-sleuth', event = "BufReadPost" },
   'tpope/vim-fugitive',
-  { 'p00f/clangd_extensions.nvim', event = "BufReadPost", },
   { 'sotte/presenting.vim' , cmd = 'PresentingStart'},
   { 'AndrewRadev/switch.vim', keys = { 'gs', mode = "n" }, },
   { 'Neur1n/neuims',

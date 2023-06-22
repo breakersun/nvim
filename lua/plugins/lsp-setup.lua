@@ -61,7 +61,7 @@ return {
             },
           },
         },
-        clangd = require('lsp-setup.clangd_extensions').setup({})
+        clangd = {}
       }
     })
   end
