@@ -35,6 +35,20 @@ return {
         if client.server_capabilities.documentSymbolProvider then
           navic.attach(client, bufnr)
         end
+
+        -- only enable inlay_hints for insert mode
+        vim.api.nvim_create_augroup("lsp_augroup", { clear = true })
+        vim.api.nvim_create_autocmd("InsertEnter", {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.inlay_hint(bufnr, true) end,
+          group = "lsp_augroup",
+        })
+        vim.api.nvim_create_autocmd("InsertLeave", {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.inlay_hint(bufnr, false) end,
+          group = "lsp_augroup",
+        })
+
       end,
       servers = {
         lua_ls = {
@@ -63,7 +77,7 @@ return {
         clangd = {}
       },
     -- Configuration of LSP inlay hints
-    inlay_hints = { enabled = true, }
+    --[[ inlay_hints = { enabled = true, } ]]
     })
   end
 }
