@@ -138,7 +138,6 @@ return {
 
       l = {
         name = "LSP",
-        a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
         c = { '<cmd>NodeAction<CR>', 'Node Action'},
         d = { "<cmd>Telescope diagnostics bufnr=0 theme=ivy<cr>", "Document Diagnostics", },
         w = { "<CMD>Telescope diagnostics theme=ivy<CR>", "Workspace Diagnostics", },
@@ -150,12 +149,8 @@ return {
         },
         i = { "<cmd>LspInfo<cr>", "Info" },
         m = { "<cmd>Mason<cr>", "Mason" },
-        --[[ j = { vim.diagnostic.goto_next, "Next Diagnostic", }, ]]
-        --[[ k = { vim.diagnostic.goto_prev, "Prev Diagnostic", }, ]]
         l = { vim.lsp.codelens.run, "CodeLens Action" },
         q = { vim.lsp.diagnostic.set_loclist, "Quickfix" },
-        r = { "<cmd>Lspsaga rename<CR>", "Rename" },
-        R = { "<cmd>Lspsaga rename ++project<CR>", "Global Rename" },
         s = { "<CMD>Telescope lsp_document_symbols theme=ivy<CR>", "Document Symbols" },
         S = { "<CMD>Telescope lsp_dynamic_workspace_symbols theme=ivy<CR>", "Workspace Symbols" },
         o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },

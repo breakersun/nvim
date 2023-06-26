@@ -9,6 +9,9 @@ return {
       keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>")
       keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
       keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+      keymap("n", "<leader>lr", "<cmd>Lspsaga rename<CR>")
+      keymap("n", "<leader>lR", "<cmd>Lspsaga rename ++project<CR>")
+      keymap("n", "<leader>la", "<cmd>Lspsaga code_action<CR>")
     end,
     dependencies = {
       {"kyazdani42/nvim-web-devicons"},
