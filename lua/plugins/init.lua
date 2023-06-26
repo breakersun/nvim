@@ -8,8 +8,6 @@ return {
     end,
   },
   'machakann/vim-highlightedyank',
-  -- Telescope
-  { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
