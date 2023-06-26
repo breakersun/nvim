@@ -7,9 +7,6 @@ return {
       return
     end
 
-    local _, gitsigns = pcall(require, 'gitsigns')
-    if not _ then print('gitsigns is not installed') end
-
     local setup = {
       plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -18,6 +15,7 @@ return {
           enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
           suggestions = 20, -- how many suggestions should be shown in the list?
         },
+
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         presets = {
@@ -62,7 +60,6 @@ return {
         spacing = 3, -- spacing between columns
         align = "left", -- align columns left, center or right
       },
-      ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
       hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
       show_help = true, -- show help message on the command line when the popup is visible
       triggers = "auto", -- automatically setup triggers
@@ -127,14 +124,6 @@ return {
       g = {
         name = "Git",
         g = { _LAZYGIT_TOGGLE, "Lazygit" },
-        j = { gitsigns.next_hunk, "Next Hunk" },
-        k = { gitsigns.prev_hunk, "Prev Hunk" },
-        l = { gitsigns.blame_line, "Blame" },
-        p = { gitsigns.preview_hunk, "Preview Hunk" },
-        r = { gitsigns.reset_hunk, "Reset Hunk" },
-        R = { gitsigns.reset_buffer, "Reset Buffer" },
-        s = { gitsigns.stage_hunk, "Stage Hunk" },
-        u = { gitsigns.undo_stage_hunk, "Undo Stage Hunk", },
         o = { "<cmd>Telescope git_status theme=ivy<cr>", "Open changed file" },
         b = { "<CMD>Telescope git_branches theme=ivy<CR>", "Checkout branch" },
         c = { "<CMD>Telescope git_commits theme=ivy<CR>", "Checkout Commits" },

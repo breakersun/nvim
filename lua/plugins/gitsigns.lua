@@ -1,6 +1,7 @@
 return {
   "lewis6991/gitsigns.nvim",
-  event = "BufReadPre",
+  event = { "BufReadPre", "BufNewFile" },
+
   config = function()
     local status_ok, gitsigns = pcall(require, "gitsigns")
     if not status_ok then
@@ -49,6 +50,18 @@ return {
       yadm = {
         enable = false,
       },
+
     }
+
+    local function map(mode, l, r, desc)
+      vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+    end
+    map("n", "<leader>gj", gitsigns.next_hunk, "Next Hunk")
+    map("n", "<leader>gk", gitsigns.prev_hunk, "Prev Hunk")
+    map("n", "<leader>gp", gitsigns.preview_hunk, "Preview Hunk")
+    map("n", "<leader>gr", gitsigns.reset_hunk, "Reset Hunk")
+    map("n", "<leader>gR", gitsigns.reset_buffer, "Reset Buffer")
+    map("n", "<leader>gs", gitsigns.stage_hunk, "Stage Hunk")
+    map("n", "<leader>gs", gitsigns.undo_stage_hunk, "UnStage Hunk")
   end,
 }
