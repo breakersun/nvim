@@ -127,7 +127,6 @@ return {
         o = { "<cmd>Telescope git_status theme=ivy<cr>", "Open changed file" },
         b = { "<CMD>Telescope git_branches theme=ivy<CR>", "Checkout branch" },
         c = { "<CMD>Telescope git_commits theme=ivy<CR>", "Checkout Commits" },
-        d = { "<cmd>Gvdiffsplit<cr>", "Diff", },
       },
 
       j = {
