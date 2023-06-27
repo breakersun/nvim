@@ -6,6 +6,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     'SmiteshP/nvim-navic',
   },
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local _, setuptool = pcall(require, 'lsp-setup')
     if not _ then return end
