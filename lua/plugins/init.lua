@@ -8,13 +8,6 @@ return {
     end,
   },
   'machakann/vim-highlightedyank',
-  -- Treesitter
-  { "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    dependencies =
-    { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    event = "BufReadPost",
-  },
   { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPost", },
   { "p00f/nvim-ts-rainbow", event = "BufReadPost", },
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
