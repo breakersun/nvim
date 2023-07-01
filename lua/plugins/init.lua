@@ -24,7 +24,7 @@ return {
   { 'nvim-telescope/telescope-project.nvim' },
   --[[ { 'ivechan/gtags.vim', event = "BufReadPost" }, ]]
   { 'junegunn/vim-easy-align', event = "BufReadPost", },
-  { 'tpope/vim-unimpaired', event = "BufReadPost", },
+  { 'tpope/vim-unimpaired', event = { "BufReadPre", "BufNewFile" }, },
   { 'tpope/vim-sleuth', event = "BufReadPost" },
   'tpope/vim-fugitive',
   { 'sotte/presenting.vim' , cmd = 'PresentingStart'},
