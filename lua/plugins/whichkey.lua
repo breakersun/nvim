@@ -161,7 +161,7 @@ return {
         g = { "<CMD>Telescope live_grep theme=ivy<CR>", "Live Grep" },
         h = { "<CMD>Telescope help_tags theme=ivy<CR>", "Find Help" },
         m = { "<CMD>Telescope man_pages theme=ivy<CR>", "Man Pages" },
-        r = { "<CMD>Telescope oldfiles theme=ivy<CR>", "Open Recent File" },
+        --[[ r = { "<CMD>Telescope oldfiles theme=ivy<CR>", "Open Recent File" }, ]]
         R = { "<CMD>Telescope registers<CR>", "Registers" },
         k = { "<CMD>Telescope keymaps<CR>", "Keymaps" },
       },
