@@ -6,25 +6,29 @@ return {
     vscode = true,
     ---@type Flash.Config
     opts = {
-      modes = { char = {enabled = false} }
+      modes = {
+        char = {
+          -- for hop.nvim like jump with y combine
+          jump_labels = true,
+          -- disable , and ; keys
+          keys = { "f", "F", "t", "T" },
+          ---@alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">
+          char_actions = function(motion)
+            return {
+              --[[ [";"] = "next", -- set to `right` to always go right ]]
+              --[[ [","] = "prev", -- set to `left` to always go left ]]
+              -- clever-f style
+              [motion:lower()] = "next",
+              [motion:upper()] = "prev",
+            }
+          end,
+          search = { wrap = false },
+          highlight = { backdrop = true },
+          jump = { register = false },
+        },
+      },
     },
-    config = function ()
-      -- to use this, make sure to set `opts.modes.char.enabled = false`
-      require("flash").setup(opts)
-      local Config = require("flash.config")
-      local Char = require("flash.plugins.char")
-      for _, motion in ipairs({ "f", "t", "F", "T" }) do
-        vim.keymap.set({ "n", "x", "o" }, motion, function()
-          require("flash").jump(Config.get({
-            mode = "char",
-            search = {
-              mode = Char.mode(motion),
-              max_length = 1,
-            },
-          }, Char.motions[motion]))
-        end)
-      end
-    end,
+
     keys = {
       {
         "s",
