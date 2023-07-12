@@ -2,7 +2,7 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    enabled = false,
+    enabled = true,
     vscode = true,
     ---@type Flash.Config
     opts = {
@@ -31,7 +31,7 @@ return {
 
     keys = {
       {
-        "s",
+        "<leader><Space>",
         mode = { "n", "x", "o" },
         function()
           require("flash").jump()
@@ -39,7 +39,7 @@ return {
         desc = "Flash",
       },
       {
-        "S",
+        "<leader>,",
         mode = { "n", "o", "x" },
         function()
           require("flash").treesitter()
