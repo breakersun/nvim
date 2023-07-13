@@ -74,3 +74,12 @@ vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- reslect last yanked block
 keymap('n', 'gp', '`[v`]', opts)
+
+if vim.g.neovide then
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<M-=>", function() change_scale_factor(1.25) end)
+  vim.keymap.set("n", "<M-->", function() change_scale_factor(1/1.25) end)
+end
