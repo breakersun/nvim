@@ -10,6 +10,7 @@ return {
         char = {
           -- for hop.nvim like jump with y combine
           jump_labels = true,
+          multi_line = false,
           -- disable , and ; keys
           keys = { "f", "F", "t", "T" },
           ---@alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">
