@@ -42,8 +42,8 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- better paste
-keymap("v", "p", '"_dp', opts)
-keymap("v", "P", '"_dP', opts)
+--[[ keymap("v", "p", '"_dp', opts) ]]
+--[[ keymap("v", "P", '"_dP', opts) ]]
 keymap('n', ',p', '"0p', opts)
 keymap('n', ',P', '"0P', opts)
 -- delete character don't yank
