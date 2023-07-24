@@ -26,6 +26,7 @@ return {
     require("luasnip.loaders.from_vscode").load({paths = "./snippets"})
 
     luasnip.filetype_extend("markdown", { "markdown", "plantuml" })
+    luasnip.filetype_extend("c", { "license"})
 
     local check_backspace = function()
       local col = vim.fn.col "." - 1
