@@ -19,6 +19,12 @@
 					"plantuml"
 				],
 				"path": "./plantuml.json"
+			},
+			{
+				"language": [
+					"doxygen"
+				],
+				"path": "./doxygen.json"
 			}
 		]
 	}

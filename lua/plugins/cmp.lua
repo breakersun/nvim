@@ -27,6 +27,7 @@ return {
 
     luasnip.filetype_extend("markdown", { "markdown", "plantuml" })
     luasnip.filetype_extend("c", { "license"})
+    luasnip.filetype_extend("c", { "doxygen"})
 
     local check_backspace = function()
       local col = vim.fn.col "." - 1
