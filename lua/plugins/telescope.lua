@@ -124,5 +124,6 @@ return {
     telescope.load_extension('ui-select')
     telescope.load_extension('project')
     telescope.load_extension('neoclip')
+    telescope.load_extension('yank_history')
   end
 }
