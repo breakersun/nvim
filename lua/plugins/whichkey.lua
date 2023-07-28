@@ -146,6 +146,7 @@ return {
           end,
           "Format"
         },
+        h = {'<cmd>ClangdSwitchSourceHeader<cr>', 'Toggle Source/Header File (Clangd)'},
         i = { "<cmd>LspInfo<cr>", "Info" },
         m = { "<cmd>Mason<cr>", "Mason" },
         l = { vim.lsp.codelens.run, "CodeLens Action" },
