@@ -7,6 +7,8 @@ return {
       return
     end
 
+    local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+
     local setup = {
       plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -158,7 +160,8 @@ return {
       s = {
         name = "Search",
         c = { "<CMD>Telescope<CR>", "Commands" },
-        s = { "<CMD>Telescope grep_string theme=ivy<CR>", "Grep String" },
+        --[[ s = { "<CMD>Telescope grep_string theme=ivy<CR>", "Grep String" }, ]]
+        s = {live_grep_args_shortcuts.grep_word_under_cursor, "Grep String" },
         g = { "<CMD>Telescope live_grep theme=ivy<CR>", "Live Grep" },
         h = { "<CMD>Telescope help_tags theme=ivy<CR>", "Find Help" },
         m = { "<CMD>Telescope man_pages theme=ivy<CR>", "Man Pages" },
