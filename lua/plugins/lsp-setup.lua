@@ -41,7 +41,11 @@ return {
         vim.api.nvim_create_augroup("lsp_augroup", { clear = true })
         vim.api.nvim_create_autocmd("InsertEnter", {
           buffer = bufnr,
-          callback = function() vim.lsp.buf.inlay_hint(bufnr, true) end,
+          callback = function()
+            if client.server_capabilities.inlayHintProvider then
+              vim.lsp.buf.inlay_hint(bufnr, true)
+            end
+          end,
           group = "lsp_augroup",
         })
         vim.api.nvim_create_autocmd("InsertLeave", {
@@ -75,10 +79,11 @@ return {
             },
           },
         },
-        clangd = {}
+        clangd = {},
+        pyright = {},
       },
     -- Configuration of LSP inlay hints
-    --[[ inlay_hints = { enabled = true, } ]]
+    --[[ inlay_hints = { enabled = false, } ]]
     })
   end
 }
