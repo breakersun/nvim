@@ -99,7 +99,7 @@ return {
       ["q"] = { "<cmd>q!<CR>", "Quit" },
       ["Q"] = { "<cmd>qall<CR>", "Quit All" },
       ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-      ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
+      ['p'] = { '<cmd>Telescope neoclip extra=star,plus<CR>', 'Clipboard Viewer'},
       ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
       ["f"] = {
         function()
@@ -192,6 +192,7 @@ return {
     }
     local vmappings = {
       ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
+      ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
     }
 
     local second_opts = {
