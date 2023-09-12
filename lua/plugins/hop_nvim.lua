@@ -1,6 +1,6 @@
 return {
   'phaazon/hop.nvim',
-  enabled = true,
+  enabled = false,
   branch = 'v2',
   config = function()
     local status_ok, hopnvim = pcall(require, 'hop')
