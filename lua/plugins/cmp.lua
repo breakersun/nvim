@@ -133,6 +133,7 @@ return {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = "natdat" },
       },
       sorting = {
         comparators = {

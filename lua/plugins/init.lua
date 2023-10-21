@@ -37,4 +37,5 @@ return {
     end,
   },
   { 'tpope/vim-repeat' },
+  { "Gelio/cmp-natdat", config = true },
 }
