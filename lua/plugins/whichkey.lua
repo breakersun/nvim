@@ -202,6 +202,8 @@ return {
 
     local second_mappings = {
       ["s"] = { "<cmd>lua require('substitute').operator()<cr>", "Substitute" },
+      ['m'] = { '<CMD> let @+=v:statusmsg<CR>', 'Copy Status Message'},
+      ['M'] = { '<CMD> let @+=v:errmsg<CR>', 'Copy Error Message'},
       p = {
         name = "Pandoc",
         b = {
