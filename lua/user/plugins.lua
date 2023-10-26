@@ -17,4 +17,4 @@ local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then return end
 
 -- Install your plugins here
-lazy.setup('plugins')
+lazy.setup('plugins', {change_detection = { notify = false }})

@@ -7,6 +7,8 @@ return {
       return
     end
 
+    local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+
     local setup = {
       plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -83,7 +85,7 @@ return {
     }
 
     local mappings = {
-      ["<space>"] = { "<cmd>HopChar2<CR>", "Hop 2 Char" },
+      --[[ ["<space>"] = { "<cmd>HopChar2<CR>", "Hop 2 Char" }, ]]
       ["/"] = { function() require('Comment.api').toggle.linewise() end, "Comment" },
       ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
       ["b"] = {
@@ -97,7 +99,7 @@ return {
       ["q"] = { "<cmd>q!<CR>", "Quit" },
       ["Q"] = { "<cmd>qall<CR>", "Quit All" },
       ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-      ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
+      ['p'] = { '<cmd>Telescope neoclip extra=star,plus<CR>', 'Clipboard Viewer'},
       ["P"] = { "<cmd>Telescope project<cr>", "Projects" },
       ["f"] = {
         function()
@@ -146,6 +148,7 @@ return {
           end,
           "Format"
         },
+        h = {'<cmd>ClangdSwitchSourceHeader<cr>', 'Toggle Source/Header File (Clangd)'},
         i = { "<cmd>LspInfo<cr>", "Info" },
         m = { "<cmd>Mason<cr>", "Mason" },
         l = { vim.lsp.codelens.run, "CodeLens Action" },
@@ -157,7 +160,8 @@ return {
       s = {
         name = "Search",
         c = { "<CMD>Telescope<CR>", "Commands" },
-        s = { "<CMD>Telescope grep_string theme=ivy<CR>", "Grep String" },
+        --[[ s = { "<CMD>Telescope grep_string theme=ivy<CR>", "Grep String" }, ]]
+        s = {live_grep_args_shortcuts.grep_word_under_cursor, "Grep String" },
         g = { "<CMD>Telescope live_grep theme=ivy<CR>", "Live Grep" },
         h = { "<CMD>Telescope help_tags theme=ivy<CR>", "Find Help" },
         m = { "<CMD>Telescope man_pages theme=ivy<CR>", "Man Pages" },
@@ -188,6 +192,7 @@ return {
     }
     local vmappings = {
       ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
+      ['p'] = { '<cmd>Telescope neoclip<CR>', 'Clipboard Viewer'},
     }
 
     local second_opts = {
@@ -197,6 +202,8 @@ return {
 
     local second_mappings = {
       ["s"] = { "<cmd>lua require('substitute').operator()<cr>", "Substitute" },
+      ['m'] = { '<CMD> let @+=v:statusmsg<CR>', 'Copy Status Message'},
+      ['M'] = { '<CMD> let @+=v:errmsg<CR>', 'Copy Error Message'},
       p = {
         name = "Pandoc",
         b = {

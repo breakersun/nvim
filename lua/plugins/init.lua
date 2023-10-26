@@ -7,7 +7,7 @@ return {
       vim.cmd([[colorscheme tokyonight-night]])
     end,
   },
-  'machakann/vim-highlightedyank',
+  --[[ 'machakann/vim-highlightedyank', ]]
   { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPost", },
   { "p00f/nvim-ts-rainbow", event = "BufReadPost", },
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
@@ -37,4 +37,5 @@ return {
     end,
   },
   { 'tpope/vim-repeat' },
+  { "Gelio/cmp-natdat", config = true },
 }

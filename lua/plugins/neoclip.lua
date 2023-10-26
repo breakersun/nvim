@@ -9,6 +9,9 @@ return {
         return data.event.operator ~= ('d' or 'c')
       end,
       preview = false,
+      on_select = {
+        move_to_front = true,
+      },
     })
   end,
   event = 'VeryLazy',

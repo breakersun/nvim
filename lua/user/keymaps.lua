@@ -42,8 +42,8 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- better paste
-keymap("v", "p", '"_dp', opts)
-keymap("v", "P", '"_dP', opts)
+--[[ keymap("v", "p", '"_dp', opts) ]]
+--[[ keymap("v", "P", '"_dP', opts) ]]
 keymap('n', ',p', '"0p', opts)
 keymap('n', ',P', '"0P', opts)
 -- delete character don't yank
@@ -74,3 +74,12 @@ vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- reslect last yanked block
 keymap('n', 'gp', '`[v`]', opts)
+
+if vim.g.neovide then
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<M-=>", function() change_scale_factor(1.25) end)
+  vim.keymap.set("n", "<M-->", function() change_scale_factor(1/1.25) end)
+end

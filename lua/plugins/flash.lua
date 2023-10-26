@@ -2,7 +2,7 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    enabled = false,
+    enabled = true,
     vscode = true,
     ---@type Flash.Config
     opts = {
@@ -10,6 +10,7 @@ return {
         char = {
           -- for hop.nvim like jump with y combine
           jump_labels = true,
+          multi_line = false,
           -- disable , and ; keys
           keys = { "f", "F", "t", "T" },
           ---@alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">
@@ -31,7 +32,7 @@ return {
 
     keys = {
       {
-        "s",
+        "<leader><Space>",
         mode = { "n", "x", "o" },
         function()
           require("flash").jump()
@@ -39,7 +40,7 @@ return {
         desc = "Flash",
       },
       {
-        "S",
+        "<leader>,",
         mode = { "n", "o", "x" },
         function()
           require("flash").treesitter()

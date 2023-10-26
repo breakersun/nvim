@@ -1,0 +1,28 @@
+{
+	"doxygen_add_group": {
+		"prefix": ",gr",
+		"body": [
+			"/**",
+			"* @addtogroup $1",
+			"* @{",
+			"*/",
+			" ",
+			"/** @} */"
+		],
+		"description": "Doxygen add to group"
+	},
+
+	"doxygen_def_group": {
+		"prefix": ",gdr",
+		"body": [
+			"/**",
+			"* @defgroup $1",
+			"* @{",
+			"This module $1 is",
+			"*/",
+			" ",
+			"/** @} */"
+		],
+		"description": "Doxygen define a group"
+	}
+}
