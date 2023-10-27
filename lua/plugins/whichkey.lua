@@ -149,7 +149,7 @@ return {
           "Format"
         },
         h = {'<cmd>ClangdSwitchSourceHeader<cr>', 'Toggle Source/Header File (Clangd)'},
-        i = { "<cmd>LspInfo<cr>", "Info" },
+        i = { "<cmd>echom expand('%:p').':'.line('.')<cr>", "Line Info" },
         m = { "<cmd>Mason<cr>", "Mason" },
         l = { vim.lsp.codelens.run, "CodeLens Action" },
         q = { vim.lsp.diagnostic.set_loclist, "Quickfix" },
