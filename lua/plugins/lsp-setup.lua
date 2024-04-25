@@ -83,6 +83,8 @@ return {
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {
+              cargo = { target = "thumbv7em-none-eabihf", },
+              checkOnSave = { allTargets = false },
               inlayHints = {
                 bindingModeHints = {
                   enable = false,
@@ -113,6 +115,9 @@ return {
                   enable = true,
                   hideClosureInitialization = false,
                   hideNamedConstructor = false,
+                },
+                cargo = {
+                  check = { allTargets = { enable = false, }, },
                 },
               }
             },
