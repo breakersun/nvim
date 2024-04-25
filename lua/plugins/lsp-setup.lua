@@ -53,7 +53,6 @@ return {
           callback = function() vim.lsp.inlay_hint(bufnr, false) end,
           group = "lsp_augroup",
         })
-
       end,
       servers = {
         lua_ls = {
@@ -81,9 +80,48 @@ return {
         },
         clangd = {},
         pyright = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              inlayHints = {
+                bindingModeHints = {
+                  enable = false,
+                },
+                chainingHints = {
+                  enable = true,
+                },
+                closingBraceHints = {
+                  enable = true,
+                  minLines = 25,
+                },
+                closureReturnTypeHints = {
+                  enable = 'never',
+                },
+                lifetimeElisionHints = {
+                  enable = 'never',
+                  useParameterNames = false,
+                },
+                maxLength = 25,
+                parameterHints = {
+                  enable = true,
+                },
+                reborrowHints = {
+                  enable = 'never',
+                },
+                renderColons = true,
+                typeHints = {
+                  enable = true,
+                  hideClosureInitialization = false,
+                  hideNamedConstructor = false,
+                },
+              }
+            },
+          },
+        },
+
       },
-    -- Configuration of LSP inlay hints
-    --[[ inlay_hints = { enabled = false, } ]]
+      -- Configuration of LSP inlay hints
+      --[[ inlay_hints = { enabled = false, } ]]
     })
   end
 }
