@@ -9,7 +9,7 @@ return {
   },
   --[[ 'machakann/vim-highlightedyank', ]]
   { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPost", },
-  { "p00f/nvim-ts-rainbow", event = "BufReadPost", },
+  { 'HiPhish/rainbow-delimiters.nvim', event = { 'BufReadPost', 'BufNewFile' } },
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
