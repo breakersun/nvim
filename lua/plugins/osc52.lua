@@ -1,10 +1,7 @@
 return {
   'ojroques/nvim-osc52',
   cond = function()
-    if vim.fn.has("win32") == 1 then
-      return false
-    end
-    return true
+    return vim.fn.has('wsl') == 1
   end,
   config = function()
     local function copy(lines, _)
