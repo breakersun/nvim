@@ -180,6 +180,13 @@ return {
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
       },
+      y = {
+        name = "Yank",
+        f = { ":call setreg('+', expand('%:.') .. ':' .. line('.'))<CR>", "Copy Path & Line Number"},
+        g = { ":e <C-r>+<CR>","Go to location in clipboard" },
+        m = { '<CMD> let @+=v:statusmsg<CR>', 'Copy Status Message'},
+        M = { '<CMD> let @+=v:errmsg<CR>', 'Copy Error Message'},
+      },
     }
 
     local vopts = {
@@ -202,8 +209,6 @@ return {
 
     local second_mappings = {
       ["s"] = { "<cmd>lua require('substitute').operator()<cr>", "Substitute" },
-      ['m'] = { '<CMD> let @+=v:statusmsg<CR>', 'Copy Status Message'},
-      ['M'] = { '<CMD> let @+=v:errmsg<CR>', 'Copy Error Message'},
       p = {
         name = "Pandoc",
         b = {
