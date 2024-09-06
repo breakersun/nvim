@@ -83,3 +83,14 @@ if vim.g.neovide then
   vim.keymap.set("n", "<M-=>", function() change_scale_factor(1.25) end)
   vim.keymap.set("n", "<M-->", function() change_scale_factor(1/1.25) end)
 end
+
+
+-- smart dd: when dd a empty line, then don't touch registers
+local smart_dd = function()
+  if vim.api.nvim_get_current_line():match("^%s*$") then
+    return '"_dd'
+  else
+    return "dd"
+  end
+end
+vim.keymap.set("n", "dd", smart_dd, { noremap = true, expr = true })
