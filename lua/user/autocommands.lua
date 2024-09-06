@@ -23,6 +23,7 @@ vim.cmd [[
   autocmd FileType markdown nmap <buffer><silent> <leader>mp :call mdip#MarkdownClipboardImage()<CR>
   autocmd BufNewFile,BufRead *.h setlocal filetype=c
   autocmd FileType c,cpp,python,lua,markdown autocmd BufWritePre <buffer> %s/\s\+$//e
+  autocmd BufEnter,FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   augroup end
 ]]
 
