@@ -5,7 +5,7 @@ return {
     {
       "<leader>?",
       function() require("which-key").show({ global = false }) end,
-      desc = "Buffer Local Keymaps (which-key)",
+      desc = "Buffer Local Keymaps",
     },
     {
       "<leader>/",
@@ -48,7 +48,7 @@ return {
       desc = "Find files",
     },
     {
-      '<leader>d', group = 'Debugger'
+      '<leader>d', group = 'Debugger', desc = 'Debugger'
     },
     {
       '<leader>db',
@@ -86,7 +86,7 @@ return {
       desc = 'Terminate Debugger'
     },
     {
-      '<leader>g', group = 'Git'
+      '<leader>g', group = 'Git', desc = 'Git'
     },
     {
       '<leader>go', '<cmd>Telescope git_status theme=ivy<cr>', desc = 'Git Status'
@@ -98,7 +98,7 @@ return {
       '<leader>gc', '<cmd>Telescope git_commits theme=ivy<cr>', desc = 'Checkout Commits'
     },
     {
-      '<leader>l', group = 'LSP'
+      '<leader>l', group = 'LSP', desc = 'LSP'
     },
     {
       '<leader>lc', '<cmd>NodeAction', desc = 'Node Action'
@@ -202,5 +202,51 @@ return {
       '<leader>yM',
       '<CMD> let @+=v:errmsg<CR>', desc = 'Copy Error Message'
     },
+    {
+      mode = 'v',
+      '<leader>/',
+      function ()
+        require("Comment.api").toggle_linewise_op(vim.fn.visualmode())
+      end,
+      desc = 'Comment'
+    },
+    {
+      ',s', "<cmd>lua require('substitute').operator()<cr>", desc = 'Substitute'
+    },
+    {
+      ',p', group = 'Pandoc'
+    },
+    {
+      ',pb',
+      function ()
+        vim.g.papyrus_pandoc_args  = '-t beamer --slide-level=2'
+      end,
+      desc = "Beamer Enable"
+    },
+    {
+      ',pc', "<cmd>PapyrusStart<cr>", desc = "Compile"
+    },
+    {
+      ',t', group = 'Toggle', desc = 'Toggle'
+    },
+    {
+      ',tl',
+      function()
+        local win = vim.api.nvim_get_current_win()
+        local qf_wind = vim.fn.getloclist(win, {winid = 0}).winid
+        local action = qf_wind > 0 and 'lclose' or 'lopen'
+        vim.cmd(action)
+      end,
+      desc = 'Toggle Location List'
+    },
+    {
+      ',tq',
+      function ()
+        local qf_wind = vim.fn.getqflist( {winid = 0}).winid
+        local action = qf_wind > 0 and 'cclose' or 'copen'
+        vim.cmd(action)
+      end,
+      desc = "Toggle Quickfix"
+    }
   }
 }
