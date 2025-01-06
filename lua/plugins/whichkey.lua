@@ -167,5 +167,40 @@ return {
     {
       '<leader>sk', '<CMD>Telescope keymaps<CR>', desc = 'Keymaps'
     },
+    {
+      '<leader>t', group = 'Terminal'
+    --[[ { ]]
+    --[[   n = { _NODE_TOGGLE, "Node" }, ]]
+    --[[   u = { _NCDU_TOGGLE, "NCDU" }, ]]
+    --[[   t = { _HTOP_TOGGLE, "Htop" }, ]]
+    --[[   p = { _PYTHON_TOGGLE, "Python" }, ]]
+    --[[   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" }, ]]
+    --[[   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" }, ]]
+    --[[   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" }, ]]
+    --[[ } ]]
+    },
+    {
+      '<leader>y', group = 'Yank'
+    },
+    {
+      '<leader>yy', '<cmd>Telescope neoclip<CR>', desc = 'Yank History'
+    },
+    {
+      '<leader>yf',
+      ':call setreg("+", expand("%:.") .. ":" .. line("."))<CR>',
+      desc = 'Copy Path & Line Number'
+    },
+    {
+      '<leader>yg',
+      ':e <C-r>+<CR>', desc = 'Go to location in clipboard'
+    },
+    {
+      '<leader>ym',
+      '<CMD> let @+=v:statusmsg<CR>', desc = 'Copy Status Message'
+    },
+    {
+      '<leader>yM',
+      '<CMD> let @+=v:errmsg<CR>', desc = 'Copy Error Message'
+    },
   }
 }
