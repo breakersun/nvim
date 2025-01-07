@@ -53,6 +53,12 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.deprecate = function() end
 
+function my_paste(reg)
+  return function(lines)
+    local content = vim.fn.getreg('"')
+    return vim.split(content, '\n')
+  end
+end
 vim.g.clipboard = {
   name = 'OSC 52',
   copy = {
@@ -60,7 +66,8 @@ vim.g.clipboard = {
     ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
   },
   paste = {
-    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    ["+"] = my_paste("+"),
+    ["*"] = my_paste("*"),
   },
 }
+
