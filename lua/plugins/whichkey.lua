@@ -132,21 +132,6 @@ return {
       '<leader>sk', '<CMD>Telescope keymaps<CR>', desc = 'Keymaps'
     },
     {
-      '<leader>t', group = 'Terminal'
-    --[[ { ]]
-    --[[   n = { _NODE_TOGGLE, "Node" }, ]]
-    --[[   u = { _NCDU_TOGGLE, "NCDU" }, ]]
-    --[[   t = { _HTOP_TOGGLE, "Htop" }, ]]
-    --[[   p = { _PYTHON_TOGGLE, "Python" }, ]]
-    --[[   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" }, ]]
-    --[[   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" }, ]]
-    --[[   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" }, ]]
-    --[[ } ]]
-    },
-    {
-      '<leader>y', group = 'Yank'
-    },
-    {
       '<leader>yy', '<cmd>Telescope neoclip<CR>', desc = 'Yank History'
     },
     {
@@ -178,9 +163,6 @@ return {
       ',s', "<cmd>lua require('substitute').operator()<cr>", desc = 'Substitute'
     },
     {
-      ',p', group = 'Pandoc'
-    },
-    {
       ',pb',
       function ()
         vim.g.papyrus_pandoc_args  = '-t beamer --slide-level=2'
@@ -189,9 +171,6 @@ return {
     },
     {
       ',pc', "<cmd>PapyrusStart<cr>", desc = "Compile"
-    },
-    {
-      ',t', group = 'Toggle', desc = 'Toggle'
     },
     {
       ',tl',
