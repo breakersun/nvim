@@ -2,14 +2,14 @@ return {
   "folke/which-key.nvim",
   opts = {
     spec = {
-			{ "<leader>d", group = "[d]bugger" },
-			{ "<leader>g", group = "[g]it" },
-			{ "<leader>l", group = "[l]sp" },
-			{ "<leader>s", group = "[s]earch" },
-			{ "<leader>t", group = "[t]erminal" },
-			{ "<leader>y", group = "[y]ank" },
-			{ ",p", group = "[p]doc" },
-			{ ",t", group = "[t]oggle" },
+			{ "<leader>d", group = "[d]bugger", icon = '🐞' },
+			{ "<leader>g", group = "[g]it", icon = '' },
+			{ "<leader>l", group = "[l]sp", icon = '☕' },
+			{ "<leader>s", group = "[s]earch", icon = '🔍' },
+			{ "<leader>t", group = "[t]erminal", icon = '💻' },
+			{ "<leader>y", group = "[y]ank", icon = '📋' },
+			{ ",p", group = "[p]doc", icon = '📝' },
+			{ ",t", group = "[t]oggle", icon = '🎚' },
 		},
   },
   keys = {
@@ -59,47 +59,6 @@ return {
       desc = "Find files",
     },
     {
-      '<leader>d', group = 'Debugger',
-    },
-    {
-      '<leader>db',
-      function()
-        require('dap').toggle_breakpoint()
-      end,
-      desc = 'Toggle Breakpoint'
-    },
-    {
-      '<leader>dB',
-      function ()
-        require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
-      end,
-      desc = 'Conditioanl Breakpoint'
-    },
-    {
-      '<leader>dp',
-      function()
-        require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
-      end,
-      desc = 'Print Ponint'
-    },
-    {
-      '<leader>dr',
-      function()
-        require('dap').repl.open()
-      end,
-      desc = 'Open REPL'
-    },
-    {
-      '<leader>dt',
-      function()
-        require('dap').terminate()
-      end,
-      desc = 'Terminate Debugger'
-    },
-    {
-      '<leader>g', group = 'Git',
-    },
-    {
       '<leader>go', '<cmd>Telescope git_status theme=ivy<cr>', desc = 'Git Status'
     },
     {
@@ -107,9 +66,6 @@ return {
     },
     {
       '<leader>gc', '<cmd>Telescope git_commits theme=ivy<cr>', desc = 'Checkout Commits'
-    },
-    {
-      '<leader>l', group = 'LSP',
     },
     {
       '<leader>lc', '<cmd>NodeAction', desc = 'Node Action'
@@ -151,9 +107,6 @@ return {
     },
     {
       '<leader>lo', '<cmd>SymbolsOutline<CR>', desc = 'Symbols Outline'
-    },
-    {
-      '<leader>s', group = 'Search'
     },
     {
       '<leader>sc', '<cmd>Telescope<cr>', desc = 'Commands'

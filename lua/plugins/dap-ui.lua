@@ -7,6 +7,7 @@ return {
       return
     end
     dap = require('dap')
+    wk = require('which-key')
 
     dapui.setup()
 
@@ -21,9 +22,44 @@ return {
     end
   end,
   keys = {
-  {'<F5>', ":lua require'dap'.continue()<CR>"},
-  {'<F10>', ":lua require'dap'.step_over()<CR>"},
-  {'<F11>', ":lua require'dap'.step_into()<CR>"},
-  {'<F12>', ":lua require'dap'.step_out()<CR>"},
+    {'<F5>', ":lua require'dap'.continue()<CR>"},
+    {'<F10>', ":lua require'dap'.step_over()<CR>"},
+    {'<F11>', ":lua require'dap'.step_into()<CR>"},
+    {'<F12>', ":lua require'dap'.step_out()<CR>"},
+    {
+      '<leader>db',
+      function()
+        require('dap').toggle_breakpoint()
+      end,
+      desc = 'Toggle Breakpoint'
+    },
+    {
+      '<leader>dB',
+      function ()
+        require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
+      end,
+      desc = 'Conditioanl Breakpoint'
+    },
+    {
+      '<leader>dp',
+      function()
+        require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
+      end,
+      desc = 'Print Ponint'
+    },
+    {
+      '<leader>dr',
+      function()
+        require('dap').repl.open()
+      end,
+      desc = 'Open REPL'
+    },
+    {
+      '<leader>dt',
+      function()
+        require('dap').terminate()
+      end,
+      desc = 'Terminate Debugger'
+    }
   }
 }
