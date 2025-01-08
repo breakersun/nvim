@@ -53,21 +53,26 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.deprecate = function() end
 
+-- https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere
+vim.opt.clipboard:append("unnamedplus")
 function my_paste(reg)
   return function(lines)
     local content = vim.fn.getreg('"')
     return vim.split(content, '\n')
   end
 end
-vim.g.clipboard = {
-  name = 'OSC 52',
-  copy = {
-    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-  },
-  paste = {
-    ["+"] = my_paste("+"),
-    ["*"] = my_paste("*"),
-  },
-}
-
+if (os.getenv('SSH_TTY') == nil)
+then
+else
+  vim.g.clipboard = {
+    name = 'OSC 52',
+    copy = {
+      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+      ["+"] = my_paste("+"),
+      ["*"] = my_paste("*"),
+    },
+  }
+end
