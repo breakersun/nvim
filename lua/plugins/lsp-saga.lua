@@ -15,7 +15,7 @@ return {
       require("lspsaga").setup({ ui = {border = "rounded"}, symbol_in_winbar = { enable = false,} })
     end,
     dependencies = {
-      {"kyazdani42/nvim-web-devicons"},
+      {"nvim-tree/nvim-web-devicons"},
       --Please make sure you install markdown and markdown_inline parser
       {"nvim-treesitter/nvim-treesitter"}
     }
