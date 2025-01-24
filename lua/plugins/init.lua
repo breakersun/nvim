@@ -13,9 +13,13 @@ return {
   "moll/vim-bbye", -- Bdelete, close buffer but not quit nvim
   -- toggleterm
   "akinsho/toggleterm.nvim",
-  { "iamcco/markdown-preview.nvim",
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = "cd app && npm install",
-    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown", "puml" }
+    end,
     ft = { "markdown" },
   },
   { 'ferrine/md-img-paste.vim', ft = { "markdown" } },
